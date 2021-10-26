@@ -467,5 +467,67 @@ img.taco {
     top: 104px;
 }
 
+.columnContainer {
+    justify-content: space-evenly;
+}
+
+.footerColumn {
+    color: #999999;
+    margin: 139px 0;
+    width: calc(100% / 6);
+}
+
+.footerColumn p { 
+    font-size: 1rem;
+    line-height: 2.1;
+}
+
+.deliciousColumn p,
+.deliciousColumn p:nth-child(3) {
+    margin-bottom: 25px;
+}
+
+.deliciousColumn p:first-child {
+    margin-bottom: 0;
+}
+
+.recentPosts p {
+    line-height: 3.5;
+}
+
+.newsletterForm {
+    height: 50%;
+}
+
+.newsletterForm .flexContainer {
+    margin-top: 24px;
+}
+
+.emailLabel { 
+    font-size: 1rem;
+    line-height: 2.1;
+}
+
+.email {
+    background-color: #5b5b5b;
+    border: none;
+    border-radius: 0;
+    color: #999999;
+    padding: 6px;
+    width: 100%;
+}
+
+.email:focus {
+    padding: 4px;
+}
+
+footer button.greenBackButton {
+    border: none;
+    margin:0;
+    height: 100%;
+    padding-right: 33px;
+    font-size: 2rem;
+}
+
 /* MEDIA QUERIES */
 
