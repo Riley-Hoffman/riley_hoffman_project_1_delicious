@@ -437,5 +437,35 @@ img.taco {
     max-width: 100%;
 }
 
+.testimonial {
+    background: hsl(71.6, 70.9%, 77.1%);
+}
+
+.testimonial .flexContainer {
+    align-items: center;
+    height: 70vh;
+    justify-content: center;
+    text-align: center;
+    max-width: 50vw;
+}
+
+.testimonial p {
+    position: relative;
+    text-align: left;
+}
+
+.testimonial p::after, q::before, q::after {
+    color: #fff;
+    position: absolute;
+}
+
+.testimonial p::after {
+    content: "< \00a0 \00a0 \00a0>";
+    font-size: 3.5rem;
+    font-weight: 700;
+    left: 23.5vw;
+    top: 104px;
+}
+
 /* MEDIA QUERIES */
 
