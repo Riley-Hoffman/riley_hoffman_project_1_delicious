@@ -427,5 +427,15 @@ img.taco {
     width: 22%;
 }
 
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.gallery img {
+    margin: 0;
+    max-width: 100%;
+}
+
 /* MEDIA QUERIES */
 
