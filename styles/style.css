@@ -138,6 +138,12 @@ q::after {
     top: 82px;
 }
 
+fieldset {
+border: none;
+margin: 0;
+padding: 0;
+}
+
 footer {
     background: #2e2e2e;
 }
@@ -267,7 +273,7 @@ flex-direction: column;
     width: 62vw;
 }
 
-.contactForm label {
+.contactForm legend {
     align-self: flex-start;
 }
 
