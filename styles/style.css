@@ -366,5 +366,34 @@ img.taco {
     align-self: flex-start;
 }
 
+.menuCategories {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    padding: 30px;
+    margin: 0 auto 0 26px;
+}
+
+.menuCategories li {
+    align-items: flex-start;
+    margin-bottom: 21px;
+    padding: 21px;
+}
+
+.menuCategories li:nth-child(5), .menuCategories li:last-child {
+    margin: 0 0 10.5px;
+    padding-bottom: 0;
+}
+
+.menuCategories h3 {
+    font-size: 1.4rem;
+    margin-left: 14px;
+    width: 100%;
+}
+
+.menuCategories p {
+    margin-left: 45px;
+}
+
 /* MEDIA QUERIES */
 
