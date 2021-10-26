@@ -279,5 +279,50 @@ header .flexContainer {
     width: 100%;
 }
 
+.afterHeader.flexContainer, .halfScreen,  .ourRestaurants, .ourRestaurants .flexContainer, .testimonial .flexContainer, .relativeParent {
+    flex-direction: column;
+}
+
+.afterHeader .halfScreen {
+    margin: 0;
+}
+
+.afterHeader .halfScreen:last-child {
+    background: #e7e7e7;
+}
+
+.afterHeader .flexContainer .flexContainer .flexContainer {
+    flex-direction: row;
+}
+
+.halfScreen {
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0 20px 0;
+    width: 50vw;
+}
+
+.halfScreen li, .gallery li {
+    list-style: none;
+}
+
+.halfScreen li, .testimonial p {
+    flex-direction: column;
+}
+
+.halfScreen li, .halfScreen li div {
+    display: flex;
+}
+
+.halfScreen li div {
+    width: 60%;
+    justify-content: space-between;
+}
+
+.halfScreen i {
+    font-size: 2.5rem;
+    line-height: 0.2;
+}
+
 /* MEDIA QUERIES */
 
