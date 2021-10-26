@@ -279,7 +279,7 @@ header .flexContainer {
     width: 100%;
 }
 
-.afterHeader.flexContainer, .halfScreen,  .ourRestaurants, .ourRestaurants .flexContainer, .testimonial .flexContainer, .relativeParent {
+.afterHeader .flexContainer, .halfScreen,  .ourRestaurants, .ourRestaurants .flexContainer, .testimonial .flexContainer, .relativeParent {
     flex-direction: column;
 }
 
