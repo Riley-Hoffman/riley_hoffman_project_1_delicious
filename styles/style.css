@@ -151,5 +151,80 @@ footer button {
 
 /* CLASSES */
 
+.blogHeader {
+    background-image: url(../assets/blog-1.jpeg);
+}
+
+.contactHeader {
+    background-image: url(../assets/contact-1.jpeg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 61vh;
+    min-width: 100%;
+}
+
+header .flexContainer {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact {
+    margin-right: 66px;
+}
+
+.navBag {
+    position: relative;
+}
+
+.shoppingBag, .count, .countContainer, .halfScreen, .relativeParent, .ourRestaurants {
+    display: flex;
+}
+
+.shoppingBag {
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    left: -42px;
+    bottom: 4px;
+}
+
+.bag,
+.fa-search {
+    font-size: 2.3rem;
+}
+
+.checkoutLink:visited {
+    color: #2e2e2e;
+}
+
+.countContainer {
+    position: relative;
+    align-items: center;
+    height: 100%;
+    justify-content: flex-end;
+    top: 13px;
+    right: 8px
+}
+
+.count {
+    width: 28px;
+    height: 28px;
+    font-size: 1.5em;
+    border-radius: 50%;
+    background-color: #63A503;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Raleway';
+    font-weight: 900;
+    color: #f6f6f6;
+    cursor: pointer;
+}
+
+.search {
+    margin-left: 13px;
+}
+
+
 /* MEDIA QUERIES */
 
