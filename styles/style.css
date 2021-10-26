@@ -395,5 +395,37 @@ img.taco {
     margin-left: 45px;
 }
 
+.ourRestaurants {
+    align-items: center;
+    margin-bottom: 120px;
+    padding-top: 150px;
+}
+
+.ourRestaurants .flexContainer {
+    align-items: center;
+}
+
+.ourRestaurants h2 {
+    margin-top: 20px;
+}
+
+.ourRestaurants p {
+    width: 50%;
+    text-align: center;
+}
+
+.relativeParent {
+    align-items: center;
+    position: relative;
+}
+
+.relativeParent img:first-child {
+    align-self: flex-end;
+    position: absolute;
+    left: 455px;
+    bottom: 240px;
+    width: 22%;
+}
+
 /* MEDIA QUERIES */
 
