@@ -529,5 +529,22 @@ footer button.greenBackButton {
     font-size: 2rem;
 }
 
+.copyright {
+    background: #222;
+    color: #999999;
+    font-family: 'Raleway';
+    padding: 20px;
+    width: 100%;
+}
+
+.copyright p {
+    margin-left: 11vw;
+}
+
+.copyright span {
+    color: #63A503;
+    text-transform: uppercase;
+}
+
 /* MEDIA QUERIES */
 
