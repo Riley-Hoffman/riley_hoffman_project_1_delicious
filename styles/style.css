@@ -353,5 +353,18 @@ header .flexContainer {
     box-shadow: inset 1px 1px 6px 1px #2e2e2e;
 }
 
+img.cabbage,
+img.taco {
+    width: 50.5%;
+}
+
+img.cabbage {
+    align-self: flex-end;
+}
+
+img.taco {
+    align-self: flex-start;
+}
+
 /* MEDIA QUERIES */
 
