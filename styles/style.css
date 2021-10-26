@@ -24,10 +24,6 @@ body, ul, h1, h2, h3, p { margin: 0; padding: 0; } ul { list-style: none; } a { 
 
 /* TAG STYLES */
 
-html {
-    background: #e7e7e7;
-}
-
 body {
     font-family: 'Lora';
     font-size: 1.3rem;
@@ -240,8 +236,11 @@ header .flexContainer {
 flex-direction: column;
 }
 
-.contactPage .flexContainer {
+.contactPage .contactSideFlexBox {
+    display: flex;
     justify-content: flex-end;
+    padding: 40px 28px;
+    width: 133vw;
 }
 
 .contactForm, .contactSidePanel {
@@ -250,10 +249,6 @@ flex-direction: column;
 
 .contactSidePanel {
     background: #e7e7e7;
-}
-
-.contactSidePanel h2, .contactSidePanel h3, .contactSidePanel p {
-    width: 61%;
 }
 
 .contactSidePanel h2, .contactSidePanel h3, .contactSidePanel p:last-child  {
@@ -270,11 +265,7 @@ flex-direction: column;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 62vw;
-}
-
-.contactForm legend {
-    align-self: flex-start;
+    width: 75%;
 }
 
 .contactForm > .flexBox {
@@ -282,15 +273,20 @@ flex-direction: column;
     width: 100%;
 }
 
+.contactForm h2 {
+    margin-bottom: 20px;
+}
+
 .contactForm input, .contactForm textarea {
     background: #e7e7e7;
+    margin: 8px 0;
 }
 
-.contactForm > .flexBox input {
-    width: calc(98% / 2);
+.contactForm input:first-child {
+    margin-right: 14px;
 }
 
-.contactForm input[placeholder="Subject"], .contactForm textarea {
+.contactForm fieldset, .contactForm input, .contactForm textarea {
     width: 100%;
 }
 
@@ -298,7 +294,10 @@ flex-direction: column;
     background: none;
     border: none;
     color: #63A503;
+    cursor: pointer;
     font-family: 'Raleway';
+    margin-top:15px;
+    padding: 0;
     text-transform: uppercase;
 }
 
