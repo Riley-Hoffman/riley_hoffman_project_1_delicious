@@ -24,6 +24,10 @@ body, ul, h1, h2, h3, p { margin: 0; padding: 0; } ul { list-style: none; } a { 
 
 /* TAG STYLES */
 
+html {
+    background: #e7e7e7;
+}
+
 body {
     font-family: 'Lora';
     font-size: 1.3rem;
