@@ -230,6 +230,10 @@ header .flexContainer {
     margin-left: 13px;
 }
 
+.blog {
+flex-direction: column;
+}
+
 .contactPage .flexContainer {
     justify-content: flex-end;
 }
