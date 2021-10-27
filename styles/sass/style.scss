@@ -21,6 +21,12 @@ header {
     background-image: url(../assets/home-1.jpeg);
     background-size: cover;
     padding: 10px;
+        header label {
+            position: absolute;
+            right: 4px;
+            top: 1px;
+            visibility: hidden;
+        }
 }
 
 h1,
@@ -61,18 +67,10 @@ h4 {
 
 nav ul {
     margin-left: 27px;
-}
-
-nav li {
-    list-style: none;
-    margin: 0px 21px;
-}
-
-header label {
-    position: absolute;
-    right: 4px;
-    top: 1px;
-    visibility: hidden;
+        li {
+            list-style: none;
+            margin: 0px 21px;
+        }
 }
 
 input:focus,
@@ -98,19 +96,21 @@ q {
     position: relative;
 }
 
-q::before, q::after {
+q::before, 
+q::after {
     font-size: 12.3rem;
-}
+    }
 
- q::before {
+    q::before {
     left: -95px;
     top: 18px;
 }
-
+    
 q::after {
     left: 51vw;
     top: 82px;
 }
+        
 
 fieldset {
 border: none;
@@ -120,19 +120,20 @@ padding: 0;
 
 footer {
     background: #2e2e2e;
+        h3 {
+            color: #63A503;
+        }
+        button {
+            padding: 0;
+            background: #63A503;
+            width: 42px;
+            height: 20px;
+            border: none;
+        }
 }
 
-footer h3 {
-    color: #63A503;
-}
 
-footer button {
-    padding: 0;
-    background: #63A503;
-    width: 42px;
-    height: 20px;
-    border: none;
-}
+
 
 /* CLASSES */
 
@@ -227,41 +228,35 @@ flex-direction: column;
 
 .contactSidePanel {
     background: #e7e7e7;
+        h2, h3 {
+            margin: 60px 0 40px;
+        }
+        p { 
+            width: 61%;
+            margin: 20px 0 30px 0; 
+        }
+
+        p.lowMargin {
+            margin: 10px 0 10px 0; 
+        }
+
+        p.lowMargin:nth-child(4) span {
+            font-family: "Raleway";
+            font-weight: bold; 
+        }
+        p.lowMargin:nth-child(4) ~ p {
+            color: #999999; 
+        }
+        
+        p.lowMargin:nth-child(5) {
+            font-style: italic;
+        }
+
+        p:last-child  {
+            margin: 20px 0 50px; 
+        }
 }
 
-.contactSidePanel h2, .contactSidePanel h3 {
-    margin: 60px 0 40px;
-}
-
-.contactSidePanel p { 
-    width: 61%;
-}
-
-.contactSidePanel p {
-    margin: 20px 0 30px 0; 
-}
-
-p.lowMargin {
-    margin: 10px 0 10px 0; 
-}
-
-p.lowMargin:nth-child(4) span {
-    font-family: "Raleway";
-    font-weight: bold; 
-}
-
-p.lowMargin:nth-child(4) ~ p {
-    color: #999999; 
-}
-
-
-p.lowMargin:nth-child(5) {
-    font-style: italic;
-}
-
-.contactSidePanel p:last-child  {
-    margin: 20px 0 50px; 
-}
 
 .contactForm {
     align-items: flex-start;
@@ -269,44 +264,48 @@ p.lowMargin:nth-child(5) {
     flex-direction: column;
     justify-content: center;
     width: 75%;
-}
 
-.contactForm > .flexBox {
-    justify-content: space-between;
-    width: 100%;
-}
+    > .flexBox {
+        justify-content: space-between;
+        width: 100%;
+    }
 
-.contactForm h2 {
+    .contactForm h2 {
     margin-bottom: 20px;
+    }
+
+    input, textarea {
+        background: #e7e7e7;
+        border: none;
+        font-family: "Lora";
+        margin: 8px 0;
+        padding: 15px;  
+        resize: none;;
+    }
+
+    input:first-child {
+        margin-right: 14px;
+    }
+
+    fieldset, input, textarea {
+        width: 100%;
+    }
+
+    .contactButton {
+        background: none;
+        border: none;
+        color: #63A503;
+        cursor: pointer;
+        font-family: 'Raleway';
+        margin-top:15px;
+        padding: 0;
+        text-transform: uppercase;
+    }
 }
 
-.contactForm input, .contactForm textarea {
-    background: #e7e7e7;
-    border: none;
-    font-family: "Lora";
-    margin: 8px 0;
-    padding: 15px;  
-    resize: none;;
-}
 
-.contactForm input:first-child {
-    margin-right: 14px;
-}
 
-.contactForm fieldset, .contactForm input, .contactForm textarea {
-    width: 100%;
-}
 
-.contactButton {
-    background: none;
-    border: none;
-    color: #63A503;
-    cursor: pointer;
-    font-family: 'Raleway';
-    margin-top:15px;
-    padding: 0;
-    text-transform: uppercase;
-}
 
 .afterHeader .flexContainer, .halfScreen,  .ourRestaurants, .ourRestaurants .flexContainer, .testimonial .flexContainer, .relativeParent {
     flex-direction: column;
