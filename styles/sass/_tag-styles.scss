@@ -24,9 +24,10 @@ header {
     min-height: 100vh;
     padding: 10px;
         label {
+            font-size: 2rem;
             position: absolute;
-            right: 4px;
-            top: 1px;
+            // right: 920px;
+            // top: 1px;
             visibility: hidden;
         }
 }
@@ -86,8 +87,7 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:checked + ul {
-	right: 50%;
-    top: 48px;
+	right: 0;
 }
 
 i {

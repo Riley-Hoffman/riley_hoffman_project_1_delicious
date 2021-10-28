@@ -302,9 +302,8 @@ header {
 }
 
 header label {
+  font-size: 2rem;
   position: absolute;
-  right: 4px;
-  top: 1px;
   visibility: hidden;
 }
 
@@ -364,8 +363,7 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:checked + ul {
-  right: 50%;
-  top: 48px;
+  right: 0;
 }
 
 i {
@@ -534,7 +532,7 @@ header .flexContainer {
   background: #e7e7e7;
 }
 
-.afterHeader .flexContainer .flexContainer .row {
+div.flexContainer.row {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -1139,18 +1137,16 @@ img.taco {
 }
 
 /* Portrait tablet and small desktops */
-@media (max-width: 940px) {
-  body {
-    background-color: #3b59a5;
-  }
-}
-
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
   header {
     background-position-x: center;
     min-height: 50vh;
     height: 50vh;
+  }
+  header .headerNav {
+    position: absolute;
+    width: 90%;
   }
   header .headerNav label {
     visibility: visible;
@@ -1166,13 +1162,16 @@ img.taco {
     font-size: 2.5rem;
     margin: 0;
     position: relative;
+    top: 48px;
     right: 150%;
     height: 40vh;
-    width: 100vw;
+    width: 92vw;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
   }
   header .headerNav ul li {
     padding: 23px;
-    margin: 0px 36px;
+    margin: 0;
   }
   header .headerNav ul li .contact {
     margin-right: 0;
@@ -1197,7 +1196,7 @@ img.taco {
     right: 28%;
   }
   header .headerNav ul .search div .fa-search {
-    Font-size: 3.3rem;
+    font-size: 3.3rem;
   }
   .blogHeader, .contactHeader {
     background-size: cover;
@@ -1208,11 +1207,63 @@ img.taco {
         -ms-flex-align: start;
             align-items: flex-start;
   }
+  .cabbageRow div.flexContainer.row, .tacoRow div.flexContainer.row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cabbageRow div.flexContainer.row img.cabbage, .cabbageRow div.flexContainer.row img.taco, .tacoRow div.flexContainer.row img.cabbage, .tacoRow div.flexContainer.row img.taco {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .cabbageRow div.flexContainer.row .halfScreen, .tacoRow div.flexContainer.row .halfScreen {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+  }
+  .gallery img {
+    margin: 0 auto;
+    max-width: 70%;
+  }
+  .ourRestaurants .relativeParent img:first-child {
+    left: 287px;
+    bottom: 156px;
+  }
+  .columnContainer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .columnContainer .footerColumn {
+    margin: 50px auto;
+    text-align: center;
+    width: 75%;
+  }
+  q::after {
+    left: 51vw;
+    top: 212px;
+  }
+  .testimonial .flexContainer p::after {
+    left: 13vw;
+    top: 228px;
+  }
+  h4 {
+    margin-bottom: 25px;
+  }
 }
 
 /* Landscape phones and down */
-@media (max-width: 480px) {
-  body {
-    background-color: #FFD166;
-  }
-}

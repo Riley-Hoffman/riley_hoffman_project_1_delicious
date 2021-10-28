@@ -3,9 +3,7 @@
 
 /* Portrait tablet and small desktops */
 		@media (max-width: 940px) {
-			body{
-				background-color: #3b59a5;
-			}
+			
 		}
 
 		/* Landscape phone to portrait tablet */
@@ -14,48 +12,54 @@
                     background-position-x: center;
                     min-height: 50vh;
                     height: 50vh;
-                        .headerNav label {
-                            visibility: visible;
-                        }
-                        .headerNav ul {
-                            background: rgba(202, 202, 202, 0.6);
-                            flex-direction: column;
-                            flex-wrap: wrap;
-                            font-size: 2.5rem;
-                            margin: 0;
-                            position: relative;
-                            right: 150%;
-                            height: 40vh;
-                            width: 100vw;
-                                li {
-                                    padding: 23px;
-                                    margin: 0px 36px;
-                                        .contact {
-                                            margin-right: 0;
-                                        }
-                                        .shoppingBag {
-                                            position: relative;
-                                            left: 7px;
-                                            bottom: 5px;
-                                                .bag {
-                                                    font-size: 3.3rem;
-                                                }
-                                                .count {
-                                                    font-size: 3rem;
-                                                    height: 40px;
-                                                    width: 40px;
+                        .headerNav {
+                            position: absolute;
+                            width: 90%;
+                                label {
+                                    visibility: visible;
+                                }
+                                ul {
+                                background: rgba(202, 202, 202, 0.6);
+                                flex-direction: column;
+                                flex-wrap: wrap;
+                                font-size: 2.5rem;
+                                margin: 0;
+                                position: relative;
+                                top: 48px;
+                                right: 150%;
+                                height: 40vh;
+                                width: 92vw;
+                                transition: 0.2s;
+                                    li {
+                                        padding: 23px;
+                                        margin: 0;
+                                            .contact {
+                                                margin-right: 0;
+                                            }
+                                            .shoppingBag {
+                                                position: relative;
+                                                left: 7px;
+                                                bottom: 5px;
+                                                    .bag {
+                                                        font-size: 3.3rem;
+                                                    }
+                                                    .count {
+                                                        font-size: 3rem;
+                                                        height: 40px;
+                                                        width: 40px;
+                                                    }
                                                 }
                                             }
-                                        }
-                                .search {
-                                    margin-left: 0;
-                                    position: absolute;
-                                    bottom: 98%;
-                                    right: 28%;
-                                            div .fa-search {
-                                                Font-size: 3.3rem;
-                                                }
-                                }
+                                    .search {
+                                        margin-left: 0;
+                                        position: absolute;
+                                        bottom: 98%;
+                                        right: 28%;
+                                                div .fa-search {
+                                                    font-size: 3.3rem;
+                                                    }
+                                    }
+                            }   
                         }
             }
             .blogHeader, .contactHeader {
@@ -65,11 +69,57 @@
             .contactHeader .flexContainer {
                 align-items: flex-start;
             }
+            .cabbageRow div.flexContainer.row, .tacoRow div.flexContainer.row {
+                flex-direction: column;
+                    img.cabbage, img.taco {
+                        align-self: flex-start;
+                    }
+                    .halfScreen {
+                        align-self: flex-start;
+                    }
+            }
+            
+            .gallery {
+                display: flex;
+                flex-direction: column;
+                margin: 0;
+                    img {
+                        margin: 0 auto;
+                        max-width: 70%;
+                    }
+
+            }
+            .ourRestaurants .relativeParent img:first-child {
+                        left: 287px;
+                        bottom: 156px;
+                        
+            }
+
+            .columnContainer {
+                justify-content: center;
+                flex-direction: column;
+                    .footerColumn {
+                        margin: 50px auto;
+                        text-align: center;
+                        width: 75%;
+                    }
+            }
+            q::after {
+                left: 51vw;
+                top: 212px;
+            }
+
+            .testimonial .flexContainer p::after {
+                left: 13vw;
+                top: 228px;
+            }
+
+            h4 {
+                margin-bottom: 25px;
+            }
          }
 
 		/* Landscape phones and down */
 		@media (max-width: 480px) {
-			body{
-				background-color: #FFD166;
-			}
+			
 		}
