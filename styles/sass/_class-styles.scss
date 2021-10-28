@@ -284,9 +284,20 @@ img.taco {
                     margin: 0;
                 }
         }
-        .tags, .share {
-            // Needs work
-            padding: 30px 0;
+        .tags {
+            padding: 30px 0 15px;
+        }
+        .share {
+            padding: 15px 0 30px;
+        }
+        .tags span, .share span {
+            font-family: 'Raleway';
+            text-transform: uppercase;
+        }
+        .tags ul, .share ul {
+            display: flex;
+            justify-content: space-evenly;
+            width: 25%;
         }
         .bioContainer {
             align-items: center;
