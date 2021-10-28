@@ -30,55 +30,52 @@ header .flexContainer {
 
 .navBag {
     position: relative;
+        .shoppingBag {
+            align-items: center;
+            height: 100%;
+            justify-content: flex-start;
+            position: absolute;
+            left: -42px;
+            bottom: 4px;
+                .bag {
+                    font-size: 2.3rem;
+                        .checkoutLink:visited {
+                            color: #2e2e2e;
+                        }
+                    }
+                .countContainer {
+                    align-items: center;
+                    height: 100%;
+                    justify-content: flex-end;
+                    position: relative;
+                    top: 13px;
+                    right: 8px;
+                        .count {
+                            align-items: center;
+                            background-color: #63A503;
+                            border-radius: 50%;
+                            color: #f6f6f6;
+                            cursor: pointer;
+                            font-family: 'Raleway';
+                            font-size: 2rem;
+                            font-weight: 900;
+                            height: 28px;
+                            justify-content: center;
+                            width: 28px; 
+                        }  
+                }
+        }
 }
 
 .shoppingBag, .count, .countContainer, .halfScreen, .relativeParent, .ourRestaurants {
     display: flex;
 }
 
-.shoppingBag {
-    align-items: center;
-    height: 100%;
-    justify-content: flex-start;
-    position: absolute;
-    left: -42px;
-    bottom: 4px;
-}
-
-.bag,
-.fa-search {
-    font-size: 2.3rem;
-}
-
-.checkoutLink:visited {
-    color: #2e2e2e;
-}
-
-.countContainer {
-    align-items: center;
-    height: 100%;
-    justify-content: flex-end;
-    position: relative;
-    top: 13px;
-    right: 8px
-}
-
-.count {
-    align-items: center;
-    background-color: #63A503;
-    border-radius: 50%;
-    color: #f6f6f6;
-    cursor: pointer;
-    font-family: 'Raleway';
-    font-size: 1.5em;
-    font-weight: 900;
-    height: 28px;
-    justify-content: center;
-    width: 28px; 
-}
-
 .search {
     margin-left: 13px;
+        div .fa-search {
+            font-size: 2.3rem;
+        }
 }
 
 
@@ -375,7 +372,7 @@ img.taco {
                 right: 99.5%;
 
             }
-}
+    }
 }
 
 .commentForm {
@@ -550,11 +547,12 @@ img.taco {
                                     border: none;
                                     font-size: 2rem;
                                     height: 100%;
-                                    margin:0;                                    padding-right: 33px;
+                                    margin:0;
+                                    padding-right: 33px;
                                 }  
                         }
                 }
-        }
+            }
 }
 
 .copyright {

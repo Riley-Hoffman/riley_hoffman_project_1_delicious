@@ -363,6 +363,11 @@ input[type="checkbox"] {
   visibility: hidden;
 }
 
+input[type="checkbox"]:checked + ul {
+  right: 50%;
+  top: 48px;
+}
+
 i {
   color: #2e2e2e;
   font-weight: 900;
@@ -447,13 +452,7 @@ header .flexContainer {
   position: relative;
 }
 
-.shoppingBag, .count, .countContainer, .halfScreen, .relativeParent, .ourRestaurants {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.shoppingBag {
+.navBag .shoppingBag {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -466,16 +465,15 @@ header .flexContainer {
   bottom: 4px;
 }
 
-.bag,
-.fa-search {
+.navBag .shoppingBag .bag {
   font-size: 2.3rem;
 }
 
-.checkoutLink:visited {
+.navBag .shoppingBag .bag .checkoutLink:visited {
   color: #2e2e2e;
 }
 
-.countContainer {
+.navBag .shoppingBag .countContainer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -488,7 +486,7 @@ header .flexContainer {
   right: 8px;
 }
 
-.count {
+.navBag .shoppingBag .countContainer .count {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -497,7 +495,7 @@ header .flexContainer {
   color: #f6f6f6;
   cursor: pointer;
   font-family: 'Raleway';
-  font-size: 1.5em;
+  font-size: 2rem;
   font-weight: 900;
   height: 28px;
   -webkit-box-pack: center;
@@ -506,8 +504,18 @@ header .flexContainer {
   width: 28px;
 }
 
+.shoppingBag, .count, .countContainer, .halfScreen, .relativeParent, .ourRestaurants {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .search {
   margin-left: 13px;
+}
+
+.search div .fa-search {
+  font-size: 2.3rem;
 }
 
 /* index.html */
@@ -1128,4 +1136,83 @@ img.taco {
 .copyright span {
   color: #63A503;
   text-transform: uppercase;
+}
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+  body {
+    background-color: #3b59a5;
+  }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  header {
+    background-position-x: center;
+    min-height: 50vh;
+    height: 50vh;
+  }
+  header .headerNav label {
+    visibility: visible;
+  }
+  header .headerNav ul {
+    background: rgba(202, 202, 202, 0.6);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    font-size: 2.5rem;
+    margin: 0;
+    position: relative;
+    right: 150%;
+    height: 40vh;
+    width: 100vw;
+  }
+  header .headerNav ul li {
+    padding: 23px;
+    margin: 0px 36px;
+  }
+  header .headerNav ul li .contact {
+    margin-right: 0;
+  }
+  header .headerNav ul li .shoppingBag {
+    position: relative;
+    left: 7px;
+    bottom: 5px;
+  }
+  header .headerNav ul li .shoppingBag .bag {
+    font-size: 3.3rem;
+  }
+  header .headerNav ul li .shoppingBag .count {
+    font-size: 3rem;
+    height: 40px;
+    width: 40px;
+  }
+  header .headerNav ul .search {
+    margin-left: 0;
+    position: absolute;
+    bottom: 98%;
+    right: 28%;
+  }
+  header .headerNav ul .search div .fa-search {
+    Font-size: 3.3rem;
+  }
+  .blogHeader, .contactHeader {
+    background-size: cover;
+    min-height: 51vh;
+  }
+  .contactHeader .flexContainer {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  body {
+    background-color: #FFD166;
+  }
 }

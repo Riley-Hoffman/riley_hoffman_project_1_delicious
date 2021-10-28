@@ -85,6 +85,11 @@ input[type="checkbox"] {
     visibility: hidden;
 }
 
+input[type="checkbox"]:checked + ul {
+	right: 50%;
+    top: 48px;
+}
+
 i {
     color: #2e2e2e;
     font-weight: 900;
