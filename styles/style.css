@@ -715,6 +715,9 @@ img.taco {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+.blog article, .blog .share, .blog .bioContainer {
+  border-bottom: 1px solid #e7e7e7;
+}
 .blog article {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -733,6 +736,9 @@ img.taco {
 .blog article p:last-child {
   margin: 0;
 }
+.blog .tags, .blog .share {
+  padding: 30px 0;
+}
 .blog .bioContainer {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -740,18 +746,27 @@ img.taco {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 80px;
 }
 .blog .bioContainer .bio {
-  width: 87%;
+  background: #e7e7e7;
+  padding: 42px;
+  width: 81%;
+}
+.blog .bioContainer .bio h3 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  line-height: initial;
+}
+.blog .bioContainer .bio p {
+  line-height: 2.1;
 }
 
 .blog article, .bioContainer, .relatedPosts, .commentsSection, .commentForm {
-  margin: 50px 0;
+  padding: 50px 0;
 }
 
 .headshot {
-  max-width: 10%;
+  max-width: 16%;
 }
 
 .posts {
@@ -799,6 +814,12 @@ img.taco {
 }
 .commentsSection .comment1 .flexBox p, .commentsSection .comment2 .flexBox p, .comments .comment1 .flexBox p, .comments .comment2 .flexBox p {
   margin: 7px;
+}
+.commentsSection .comment1 .flexBox p span, .commentsSection .comment2 .flexBox p span, .comments .comment1 .flexBox p span, .comments .comment2 .flexBox p span {
+  font-family: "Raleway";
+}
+.commentsSection .comment1 .flexBox .date, .commentsSection .comment2 .flexBox .date, .comments .comment1 .flexBox .date, .comments .comment2 .flexBox .date {
+  font-family: "Raleway";
 }
 .commentsSection .comment1 .flexBox::before, .commentsSection .comment2 .flexBox::before, .comments .comment1 .flexBox::before, .comments .comment2 .flexBox::before {
   color: #e7e7e7;
