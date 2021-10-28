@@ -246,8 +246,8 @@ time {
 
 /* Convenient Classes */
 .wrapper {
-  max-width: 1200px;
-  width: 85%;
+  max-width: 1100px;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -270,10 +270,14 @@ time {
   width: 100%;
 }
 
+html {
+  background: #f6f6f6;
+}
+
 body {
+  color: #2e2e2e;
   font-family: "Lora";
   font-size: 1.3rem;
-  color: #2e2e2e;
   line-height: 21px;
   letter-spacing: 0.3px;
 }
@@ -285,15 +289,15 @@ header, nav ul {
 }
 
 header {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  min-height: 100vh;
   background-image: url(../assets/home-1.jpeg);
   background-size: cover;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 100vh;
   padding: 10px;
 }
 header label {
@@ -314,14 +318,14 @@ nav {
 }
 
 h1 {
-  line-height: 15px;
   letter-spacing: 1.1px;
+  line-height: 15px;
   margin: 25px;
 }
 
 h2 {
+  letter-spacing: 0.5px;
   line-height: 20px;
-  letter-spacing: 0.5;
 }
 
 h3 {
@@ -358,8 +362,8 @@ input[type=checkbox] {
 }
 
 i {
-  font-weight: 900;
   color: #2e2e2e;
+  font-weight: 900;
 }
 
 q {
@@ -398,34 +402,35 @@ footer h3 {
   color: #63A503;
 }
 footer button {
-  padding: 0;
   background: #63A503;
-  width: 42px;
-  height: 20px;
   border: none;
+  height: 20px;
+  padding: 0;
+  width: 42px;
 }
 
 /* Header */
 header .flexContainer {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.blogHeader, .contactHeader {
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .blogHeader {
   background-image: url(../assets/blog-1.jpeg);
-  background-repeat: no-repeat;
-  background-size: contain;
   min-height: 75vh;
 }
 
 .contactHeader {
   background-image: url(../assets/contact-1.jpeg);
-  background-repeat: no-repeat;
-  background-size: contain;
   min-height: 61vh;
   min-width: 100%;
 }
@@ -445,13 +450,13 @@ header .flexContainer {
 }
 
 .shoppingBag {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   position: absolute;
   left: -42px;
   bottom: 4px;
@@ -467,7 +472,6 @@ header .flexContainer {
 }
 
 .countContainer {
-  position: relative;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -475,26 +479,27 @@ header .flexContainer {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  position: relative;
   top: 13px;
   right: 8px;
 }
 
 .count {
-  width: 28px;
-  height: 28px;
-  font-size: 1.5em;
-  border-radius: 50%;
-  background-color: #63A503;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: "Raleway";
-  font-weight: 900;
+  background-color: #63A503;
+  border-radius: 50%;
   color: #f6f6f6;
   cursor: pointer;
+  font-family: "Raleway";
+  font-size: 1.5em;
+  font-weight: 900;
+  height: 28px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 28px;
 }
 
 .search {
@@ -553,10 +558,10 @@ header .flexContainer {
 }
 
 .halfScreen li div {
-  width: 60%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 60%;
 }
 
 .halfScreen i {
@@ -579,7 +584,7 @@ header .flexContainer {
   color: #f6f6f6;
   font-family: "Raleway";
   margin-top: 15px;
-  padding: 10px 20px;
+  padding: 13px 35px;
   text-transform: uppercase;
 }
 
@@ -607,8 +612,8 @@ img.taco {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  padding: 30px;
   margin: 0 auto 0 26px;
+  padding: 30px;
 }
 .menuCategories li {
   -webkit-box-align: start;
@@ -656,12 +661,12 @@ img.taco {
 }
 .ourRestaurants .greenLine {
   border: 1px solid #63A503;
-  width: 9%;
   margin-bottom: 18px;
+  width: 9%;
 }
 .ourRestaurants p {
-  width: 50%;
   text-align: center;
+  width: 50%;
 }
 
 .gallery {
@@ -684,8 +689,8 @@ img.taco {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-align: center;
   max-width: 50vw;
+  text-align: center;
 }
 .testimonial .flexContainer p {
   position: relative;
@@ -804,10 +809,16 @@ img.taco {
 }
 
 .commentForm {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .commentForm fieldset {
   display: -webkit-box;
@@ -817,6 +828,33 @@ img.taco {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
+}
+.commentForm fieldset p {
+  color: #999999;
+  margin: 10px 0 20px;
+}
+.commentForm fieldset .flexBox {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.commentForm fieldset .flexBox input {
+  width: calc(100% / 3 - 20px);
+}
+.commentForm fieldset .commentForm h2 {
+  margin-bottom: 20px;
+}
+.commentForm fieldset input, .commentForm fieldset textarea {
+  background: #f6f6f6;
+  border: 2px solid #e7e7e7;
+  font-family: "Lora";
+  margin: 8px 0;
+  padding: 15px;
+  resize: none;
+}
+.commentForm .greenBackButton {
+  padding: 20px 30px;
 }
 
 /* contact.html */
@@ -839,9 +877,6 @@ img.taco {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -892,8 +927,8 @@ img.taco {
   margin: 60px 0 40px;
 }
 .contactSidePanel p {
-  width: 61%;
   margin: 20px 0 30px 0;
+  width: 61%;
 }
 .contactSidePanel p.lowMargin {
   margin: 10px 0 10px 0;
@@ -960,10 +995,10 @@ img.taco {
 }
 .columnContainer .footerColumn .newsletterForm .flexContainer .greenBackButton {
   border: none;
-  margin: 0;
-  height: 100%;
-  padding-right: 33px;
   font-size: 2rem;
+  height: 100%;
+  margin: 0;
+  padding-right: 33px;
 }
 
 .copyright {

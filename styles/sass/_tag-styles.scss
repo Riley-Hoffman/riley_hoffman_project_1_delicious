@@ -1,9 +1,13 @@
 // TAG STYLES
 
+html {
+    background: #f6f6f6;
+}
+
 body {
+    color: #2e2e2e;
     font-family: 'Lora';
     font-size: 1.3rem;
-    color: #2e2e2e;
     line-height: 21px;
     letter-spacing: 0.3px;
 }
@@ -13,11 +17,11 @@ header, nav ul {
 }
 
 header {
-    justify-content: space-between;
     align-items: flex-start;
-    min-height: 100vh;
     background-image: url(../assets/home-1.jpeg);
     background-size: cover;
+    justify-content: space-between;
+    min-height: 100vh;
     padding: 10px;
         label {
             position: absolute;
@@ -38,14 +42,14 @@ nav {
 }
 
 h1 {
-    line-height: 15px;
     letter-spacing: 1.1px;
+    line-height: 15px;
     margin: 25px;
 }
 
 h2 {
-    line-height: 20px;
-    letter-spacing: 0.5;
+    letter-spacing: 0.5px;
+    line-height: 20px; 
 }
 
 h3 {
@@ -82,8 +86,8 @@ input[type="checkbox"] {
 }
 
 i {
+    color: #2e2e2e;
     font-weight: 900;
-    color: #2e2e2e
 }
 
 q {
@@ -97,9 +101,9 @@ q {
 q::before, 
 q::after {
     font-size: 12.3rem;
-    }
+}
 
-    q::before {
+q::before {
     left: -95px;
     top: 18px;
 }
@@ -109,7 +113,6 @@ q::after {
     top: 82px;
 }
         
-
 fieldset {
 border: none;
 margin: 0;
@@ -122,10 +125,10 @@ footer {
             color: #63A503;
         }
         button {
-            padding: 0;
             background: #63A503;
-            width: 42px;
-            height: 20px;
             border: none;
+            height: 20px;
+            padding: 0;
+            width: 42px;
         }
 }

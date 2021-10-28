@@ -127,18 +127,18 @@
                         </ul>
                     </div>
 
-                        <form action="" class="commentForm">
-                            <legend>
-                                <h2>Leave A Comment</h2>
-                                <p>Your email address will not be published. Required fields are marked *</p>
-                            </legend>
+                        <form action="_blank" class="commentForm flexBox">
                             <fieldset>
+                                <legend>
+                                    <h2>Leave A Comment</h2>
+                                </legend>
+                                <p>Your email address will not be published. Required fields are marked *</p>
                                 <div class="flexBox">
                                     <input type="text" placeholder="Name *">
                                     <input type="text" placeholder="Email *">
+                                    <input type="text" placeholder="Your Website">
                                 </div>
-                                <input type="text" placeholder="Your Website">
-                                <textarea name="" id="" cols="60" rows="10" placeholder="Comment"></textarea>
+                                <textarea name="commentBox" id="commentBox" cols="60" rows="10" placeholder="Comment"></textarea>
                             </fieldset>
                             <button class="greenBackButton" type="submit">Submit Comment</button>
                         </form>
@@ -179,15 +179,15 @@
                 <form action="submit" class="newsletterForm">
                     <label class="emailLabel" for="email">Get all of our newest recipes immediately in your inbox!</label>
                     <div class="flexContainer">
-                    <input class="email" type="email" id="email" placeholder="Enter your email"><button class="greenBackButton" type="submit">➞</button></form>
+                        <input class="email" type="email" id="email" placeholder="Enter your email"><button class="greenBackButton" type="submit">➞</button>
                     </div>
+                </form>
             </div>
         </div>
         <div class="copyright">
             <div class="flexContainer">
                 <p>Copyright @ 2015 by <span>Polar</span>. All Rights Reserved</p>
             </div>
-        </div>
         </div>
     </footer>
 </body>
