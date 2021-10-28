@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -14,7 +15,7 @@ article, aside, footer, header, nav, section {
 
 h1 {
   font-size: 2em;
-  margin: .67em 0;
+  margin: 0.67em 0;
 }
 
 figcaption, figure, main {
@@ -33,7 +34,7 @@ hr {
 }
 
 pre {
-  font-family: monospace,monospace;
+  font-family: monospace, monospace;
   font-size: 1em;
 }
 
@@ -58,7 +59,7 @@ b, strong {
 }
 
 code, kbd, samp {
-  font-family: monospace,monospace;
+  font-family: monospace, monospace;
   font-size: 1em;
 }
 
@@ -83,11 +84,11 @@ sub, sup {
 }
 
 sub {
-  bottom: -.25em;
+  bottom: -0.25em;
 }
 
 sup {
-  top: -.5em;
+  top: -0.5em;
 }
 
 audio, video {
@@ -136,7 +137,7 @@ button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring
 }
 
 fieldset {
-  padding: .35em .75em .625em;
+  padding: 0.35em 0.75em 0.625em;
 }
 
 legend {
@@ -202,6 +203,7 @@ template {
   display: none;
 }
 
+/* Border Box */
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -212,16 +214,12 @@ html {
           box-sizing: inherit;
 }
 
+/* Base Font Size (1rem = 10px) */
 html {
   font-size: 62.5%;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
+/* Stablizing Base Style */
 body, ul, h1, h2, h3, p {
   margin: 0;
   padding: 0;
@@ -246,6 +244,7 @@ time {
   font-weight: bold;
 }
 
+/* Convenient Classes */
 .wrapper {
   max-width: 1200px;
   width: 85%;
@@ -271,9 +270,8 @@ time {
   width: 100%;
 }
 
-/* TAG STYLES */
 body {
-  font-family: 'Lora';
+  font-family: "Lora";
   font-size: 1.3rem;
   color: #2e2e2e;
   line-height: 21px;
@@ -298,7 +296,6 @@ header {
   background-size: cover;
   padding: 10px;
 }
-
 header label {
   position: absolute;
   right: 4px;
@@ -311,7 +308,7 @@ h2,
 h3,
 h4,
 nav {
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -345,7 +342,6 @@ h4 {
 nav ul {
   margin-left: 27px;
 }
-
 nav ul li {
   list-style: none;
   margin: 0px 21px;
@@ -357,7 +353,7 @@ textarea:focus {
   outline: 1px solid #63A503;
 }
 
-input[type="checkbox"] {
+input[type=checkbox] {
   visibility: hidden;
 }
 
@@ -367,7 +363,7 @@ i {
 }
 
 q {
-  font-family: 'Lora';
+  font-family: "Lora";
   font-style: italic;
   line-height: 20px;
   letter-spacing: 0.6px;
@@ -398,11 +394,9 @@ fieldset {
 footer {
   background: #2e2e2e;
 }
-
 footer h3 {
   color: #63A503;
 }
-
 footer button {
   padding: 0;
   background: #63A503;
@@ -411,7 +405,16 @@ footer button {
   border: none;
 }
 
-/* CLASSES */
+/* Header */
+header .flexContainer {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .blogHeader {
   background-image: url(../assets/blog-1.jpeg);
 }
@@ -422,15 +425,6 @@ footer button {
   background-size: contain;
   min-height: 61vh;
   min-width: 100%;
-}
-
-header .flexContainer {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .contact {
@@ -494,7 +488,7 @@ header .flexContainer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-weight: 900;
   color: #f6f6f6;
   cursor: pointer;
@@ -504,118 +498,7 @@ header .flexContainer {
   margin-left: 13px;
 }
 
-.blog {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.contactPage .contactSideFlexBox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  padding: 29px 28px 40px;
-  width: 133vw;
-}
-
-.contactForm, .contactSidePanel {
-  padding: 34px;
-}
-
-.contactSidePanel {
-  background: #e7e7e7;
-}
-
-.contactSidePanel h2, .contactSidePanel h3 {
-  margin: 60px 0 40px;
-}
-
-.contactSidePanel p {
-  width: 61%;
-  margin: 20px 0 30px 0;
-}
-
-.contactSidePanel p.lowMargin {
-  margin: 10px 0 10px 0;
-}
-
-.contactSidePanel p.lowMargin:nth-child(4) span {
-  font-family: "Raleway";
-  font-weight: bold;
-}
-
-.contactSidePanel p.lowMargin:nth-child(4) ~ p {
-  color: #999999;
-}
-
-.contactSidePanel p.lowMargin:nth-child(5) {
-  font-style: italic;
-}
-
-.contactSidePanel p:last-child {
-  margin: 20px 0 50px;
-}
-
-.contactForm {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 75%;
-}
-
-.contactForm > .flexBox {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-}
-
-.contactForm .contactForm h2 {
-  margin-bottom: 20px;
-}
-
-.contactForm input, .contactForm textarea {
-  background: #e7e7e7;
-  border: none;
-  font-family: "Lora";
-  margin: 8px 0;
-  padding: 15px;
-  resize: none;
-}
-
-.contactForm input:first-child {
-  margin-right: 14px;
-}
-
-.contactForm fieldset, .contactForm input, .contactForm textarea {
-  width: 100%;
-}
-
-.contactForm .contactButton {
-  background: none;
-  border: none;
-  color: #63A503;
-  cursor: pointer;
-  font-family: 'Raleway';
-  margin-top: 15px;
-  padding: 0;
-  text-transform: uppercase;
-}
-
+/* index.html */
 .afterHeader .flexContainer, .halfScreen, .ourRestaurants, .testimonial .flexContainer, .relativeParent {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -691,7 +574,7 @@ header .flexContainer {
 .greenBackButton {
   background: #63A503;
   color: #f6f6f6;
-  font-family: 'Raleway';
+  font-family: "Raleway";
   margin-top: 15px;
   padding: 10px 20px;
   text-transform: uppercase;
@@ -718,16 +601,12 @@ img.taco {
 }
 
 .menuCategories {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
   padding: 30px;
   margin: 0 auto 0 26px;
 }
-
 .menuCategories li {
   -webkit-box-align: start;
       -ms-flex-align: start;
@@ -735,17 +614,14 @@ img.taco {
   margin-bottom: 21px;
   padding: 21px;
 }
-
 .menuCategories li div h3 {
   font-size: 1.4rem;
   margin-left: 14px;
   width: 100%;
 }
-
 .menuCategories li p {
   margin-left: 45px;
 }
-
 .menuCategories li:nth-child(5), .menuCategories li:last-child {
   margin: 0 0 10.5px;
   padding-bottom: 0;
@@ -758,14 +634,12 @@ img.taco {
   margin-bottom: 120px;
   padding-top: 150px;
 }
-
 .ourRestaurants .relativeParent {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   position: relative;
 }
-
 .ourRestaurants .relativeParent img:first-child {
   -ms-flex-item-align: end;
       align-self: flex-end;
@@ -774,29 +648,23 @@ img.taco {
   bottom: 240px;
   width: 22%;
 }
-
 .ourRestaurants h2 {
   margin-top: 20px;
 }
-
 .ourRestaurants .greenLine {
   border: 1px solid #63A503;
   width: 9%;
   margin-bottom: 18px;
 }
-
 .ourRestaurants p {
   width: 50%;
   text-align: center;
 }
 
 .gallery {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
-
 .gallery img {
   margin: 0;
   max-width: 100%;
@@ -805,7 +673,6 @@ img.taco {
 .testimonial {
   background: #deee9b;
 }
-
 .testimonial .flexContainer {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -817,68 +684,199 @@ img.taco {
   text-align: center;
   max-width: 50vw;
 }
-
 .testimonial .flexContainer p {
   position: relative;
   text-align: left;
 }
-
 .testimonial .flexContainer p::after, .testimonial .flexContainer q::before, .testimonial .flexContainer q::after {
   color: #fff;
   position: absolute;
 }
-
 .testimonial .flexContainer p::after {
-  content: "< \00a0 \00a0 \00a0>";
+  content: "<    >";
   font-size: 3.5rem;
   font-weight: 700;
   left: 23.5vw;
   top: 104px;
 }
 
+/* blog.html */
+.blog {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.blog article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.blog .bioContainer {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.blog article, .bioContainer, .relatedPosts, .commentsSection, .commentForm {
+  margin: 50px 0;
+}
+
+.headshot {
+  max-width: 10%;
+}
+
+.commentForm {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.commentForm fieldset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* contact.html */
+.contactPage .contactSideFlexBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 29px 28px 40px;
+  width: 133vw;
+}
+
+.contactForm, .contactSidePanel {
+  padding: 34px;
+}
+
+.contactForm {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 75%;
+}
+.contactForm > .flexBox {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+.contactForm .contactForm h2 {
+  margin-bottom: 20px;
+}
+.contactForm input, .contactForm textarea {
+  background: #e7e7e7;
+  border: none;
+  font-family: "Lora";
+  margin: 8px 0;
+  padding: 15px;
+  resize: none;
+}
+.contactForm input:first-child {
+  margin-right: 14px;
+}
+.contactForm fieldset, .contactForm input, .contactForm textarea {
+  width: 100%;
+}
+.contactForm .contactButton {
+  background: none;
+  border: none;
+  color: #63A503;
+  cursor: pointer;
+  font-family: "Raleway";
+  margin-top: 15px;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.contactSidePanel {
+  background: #e7e7e7;
+}
+.contactSidePanel h2, .contactSidePanel h3 {
+  margin: 60px 0 40px;
+}
+.contactSidePanel p {
+  width: 61%;
+  margin: 20px 0 30px 0;
+}
+.contactSidePanel p.lowMargin {
+  margin: 10px 0 10px 0;
+}
+.contactSidePanel p.lowMargin:nth-child(4) span {
+  font-family: "Raleway";
+  font-weight: bold;
+}
+.contactSidePanel p.lowMargin:nth-child(4) ~ p {
+  color: #999999;
+}
+.contactSidePanel p.lowMargin:nth-child(5) {
+  font-style: italic;
+}
+.contactSidePanel p:last-child {
+  margin: 20px 0 50px;
+}
+
+/* Footer */
 .columnContainer {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
-
 .columnContainer .footerColumn {
   color: #999999;
   margin: 139px 0;
   width: calc(100% / 6);
 }
-
 .columnContainer .footerColumn p {
   font-size: 1rem;
   line-height: 2.1;
 }
-
 .columnContainer .footerColumn .deliciousColumn p,
 .columnContainer .footerColumn .deliciousColumn p:nth-child(3) {
   margin-bottom: 25px;
 }
-
 .columnContainer .footerColumn .deliciousColumn p:first-child {
   margin-bottom: 0;
 }
-
 .columnContainer .footerColumn .recentPosts p {
   line-height: 3.5;
 }
-
 .columnContainer .footerColumn .newsletterForm {
   height: 50%;
 }
-
 .columnContainer .footerColumn .newsletterForm .emailLabel {
   font-size: 1rem;
   line-height: 2.1;
 }
-
 .columnContainer .footerColumn .newsletterForm .flexContainer {
   margin-top: 24px;
 }
-
 .columnContainer .footerColumn .newsletterForm .flexContainer .email {
   background-color: #5b5b5b;
   border: none;
@@ -887,11 +885,9 @@ img.taco {
   padding: 6px;
   width: 100%;
 }
-
 .columnContainer .footerColumn .newsletterForm .flexContainer .email:focus {
   padding: 4px;
 }
-
 .columnContainer .footerColumn .newsletterForm .flexContainer .greenBackButton {
   border: none;
   margin: 0;
@@ -903,18 +899,14 @@ img.taco {
 .copyright {
   background: #222;
   color: #999999;
-  font-family: 'Raleway';
+  font-family: "Raleway";
   padding: 20px;
   width: 100%;
 }
-
 .copyright p {
   margin-left: 11vw;
 }
-
 .copyright span {
   color: #63A503;
   text-transform: uppercase;
 }
-
-/* MEDIA QUERIES */

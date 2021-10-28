@@ -263,7 +263,35 @@ img.taco {
 
 .blog {
 flex-direction: column;
+    article {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bioContainer {
+        align-items: center;
+        justify-content: center;
+    }
+    
 }
+
+.blog article, .bioContainer, .relatedPosts, .commentsSection, .commentForm {
+    margin: 50px 0;
+}
+
+.headshot {
+    max-width: 10%;
+            }
+
+.commentForm {
+    flex-direction: column;
+    fieldset {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
 
 /* contact.html */
 
