@@ -73,12 +73,20 @@
                 flex-direction: column;
                     img.cabbage, img.taco {
                         align-self: flex-start;
+                        margin: 20px auto;
+                        max-width: 70%;
                     }
                     .halfScreen {
                         align-self: flex-start;
+                        width: 100%;
+                            .menuCategories {
+                                margin: 0;
+                            }
                     }
             }
-            
+            .cabbageRow div.flexContainer.row {
+                flex-direction: column-reverse;
+            }
             .gallery {
                 display: flex;
                 flex-direction: column;
@@ -95,15 +103,6 @@
                         
             }
 
-            .columnContainer {
-                justify-content: center;
-                flex-direction: column;
-                    .footerColumn {
-                        margin: 50px auto;
-                        text-align: center;
-                        width: 75%;
-                    }
-            }
             q::after {
                 left: 51vw;
                 top: 212px;
@@ -116,6 +115,59 @@
 
             h4 {
                 margin-bottom: 25px;
+            }
+
+            .blog .tags ul, .blog .share ul {
+                width: 100%;
+            }
+            
+            .blog .bioContainer {
+                position: relative;
+                    .headshot {
+                    max-width: 34%;
+                    position: absolute;
+                    top: 10px;
+                    left: 74%;
+                }
+            }
+            
+
+            
+
+            .posts {
+                flex-direction: column;
+                    li, li:nth-of-type(2) {
+                        margin: 20px 0;
+                    }
+            }
+
+            .commentForm fieldset .flexBox {
+                flex-direction: column;
+            }
+
+            .commentForm fieldset .flexBox input, .commentForm textarea {
+                width: 100%;
+            }
+
+            .contactPage > .flexContainer {
+                flex-direction: column;
+            }
+
+            .contactPage .contactSideFlexBox, .contactForm {
+                width: 100%;
+            }
+
+            .contactSidePanel p {
+                width: 100%;
+            }
+
+            .columnContainer {
+                justify-content: center;
+                flex-direction: column;
+                    .footerColumn {
+                        margin: 50px auto;
+                        width: 75%;
+                    }
             }
          }
 

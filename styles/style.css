@@ -1216,10 +1216,22 @@ img.taco {
   .cabbageRow div.flexContainer.row img.cabbage, .cabbageRow div.flexContainer.row img.taco, .tacoRow div.flexContainer.row img.cabbage, .tacoRow div.flexContainer.row img.taco {
     -ms-flex-item-align: start;
         align-self: flex-start;
+    margin: 20px auto;
+    max-width: 70%;
   }
   .cabbageRow div.flexContainer.row .halfScreen, .tacoRow div.flexContainer.row .halfScreen {
     -ms-flex-item-align: start;
         align-self: flex-start;
+    width: 100%;
+  }
+  .cabbageRow div.flexContainer.row .halfScreen .menuCategories, .tacoRow div.flexContainer.row .halfScreen .menuCategories {
+    margin: 0;
+  }
+  .cabbageRow div.flexContainer.row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
   .gallery {
     display: -webkit-box;
@@ -1239,6 +1251,59 @@ img.taco {
     left: 287px;
     bottom: 156px;
   }
+  q::after {
+    left: 51vw;
+    top: 212px;
+  }
+  .testimonial .flexContainer p::after {
+    left: 13vw;
+    top: 228px;
+  }
+  h4 {
+    margin-bottom: 25px;
+  }
+  .blog .tags ul, .blog .share ul {
+    width: 100%;
+  }
+  .blog .bioContainer {
+    position: relative;
+  }
+  .blog .bioContainer .headshot {
+    max-width: 34%;
+    position: absolute;
+    top: 10px;
+    left: 74%;
+  }
+  .posts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .posts li, .posts li:nth-of-type(2) {
+    margin: 20px 0;
+  }
+  .commentForm fieldset .flexBox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .commentForm fieldset .flexBox input, .commentForm textarea {
+    width: 100%;
+  }
+  .contactPage > .flexContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contactPage .contactSideFlexBox, .contactForm {
+    width: 100%;
+  }
+  .contactSidePanel p {
+    width: 100%;
+  }
   .columnContainer {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -1250,19 +1315,7 @@ img.taco {
   }
   .columnContainer .footerColumn {
     margin: 50px auto;
-    text-align: center;
     width: 75%;
-  }
-  q::after {
-    left: 51vw;
-    top: 212px;
-  }
-  .testimonial .flexContainer p::after {
-    left: 13vw;
-    top: 228px;
-  }
-  h4 {
-    margin-bottom: 25px;
   }
 }
 
