@@ -417,6 +417,9 @@ header .flexContainer {
 
 .blogHeader {
   background-image: url(../assets/blog-1.jpeg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 75vh;
 }
 
 .contactHeader {
@@ -716,13 +719,26 @@ img.taco {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+.blog article .byLine {
+  margin: 5px 0 30px;
+}
+.blog article p {
+  margin: 0 0 30px;
+}
+.blog article p:last-child {
+  margin: 0;
+}
 .blog .bioContainer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 80px;
+}
+.blog .bioContainer .bio {
+  width: 87%;
 }
 
 .blog article, .bioContainer, .relatedPosts, .commentsSection, .commentForm {
@@ -731,6 +747,60 @@ img.taco {
 
 .headshot {
   max-width: 10%;
+}
+
+.posts {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.posts li:nth-of-type(2) {
+  margin: 0 25px;
+}
+
+.posts h3 {
+  margin-bottom: 50px;
+}
+
+.post h3 {
+  margin: 24px 0;
+}
+
+.commentsSection, .comments {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.commentsSection .comment1, .commentsSection .comment2, .comments .comment1, .comments .comment2 {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 25px 0;
+}
+.commentsSection .comment1 img, .commentsSection .comment2 img, .comments .comment1 img, .comments .comment2 img {
+  height: 100%;
+  margin-right: 30px;
+  max-width: 5vw;
+}
+.commentsSection .comment1 .flexBox, .commentsSection .comment2 .flexBox, .comments .comment1 .flexBox, .comments .comment2 .flexBox {
+  background: #e7e7e7;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+.commentsSection .comment1 .flexBox p, .commentsSection .comment2 .flexBox p, .comments .comment1 .flexBox p, .comments .comment2 .flexBox p {
+  margin: 7px;
+}
+.commentsSection .comment1 .flexBox::before, .commentsSection .comment2 .flexBox::before, .comments .comment1 .flexBox::before, .comments .comment2 .flexBox::before {
+  color: #e7e7e7;
+  content: "◀";
+  position: absolute;
+  top: 4%;
+  right: 99.5%;
 }
 
 .commentForm {

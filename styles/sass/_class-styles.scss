@@ -10,6 +10,9 @@ header .flexContainer {
 
 .blogHeader {
     background-image: url(../assets/blog-1.jpeg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 75vh;
 }
 
 .contactHeader {
@@ -266,14 +269,28 @@ flex-direction: column;
     article {
         display: flex;
         flex-direction: column;
-    }
+        .byLine {
+                margin: 5px 0 30px;
+        }
+        p {
+            margin: 0 0 30px;
+        }
 
+        p:last-child {
+            margin: 0;
+        }
+    }
     .bioContainer {
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
+        margin-bottom: 80px;
+            .bio {
+                width: 87%;
+            }
     }
-    
 }
+
+
 
 .blog article, .bioContainer, .relatedPosts, .commentsSection, .commentForm {
     margin: 50px 0;
@@ -282,6 +299,50 @@ flex-direction: column;
 .headshot {
     max-width: 10%;
             }
+
+.posts {
+    align-items: flex-end;
+   li:nth-of-type(2) {
+        margin: 0 25px;
+    }
+}
+
+.posts h3 {
+    margin-bottom: 50px;
+}
+
+.post h3 {
+    margin: 24px 0;
+}
+
+.commentsSection, .comments {
+    flex-direction: column;
+    .comment1, .comment2 {
+        flex-direction: row;
+        margin: 25px 0;
+            img {
+                height: 100%;
+                margin-right: 30px;
+                max-width: 5vw;
+            }
+            .flexBox {
+                background: #e7e7e7;
+                flex-direction: column;
+                position: relative;
+                    p {
+                        margin: 7px;
+                    }
+            }
+            .flexBox::before {
+                color: #e7e7e7;
+                content: "◀";
+                position: absolute;
+                top: 4%;
+                right: 99.5%;
+
+            }
+}
+}
 
 .commentForm {
     flex-direction: column;
