@@ -1,0 +1,429 @@
+// CLASSES
+
+
+/* Header */
+
+header .flexContainer {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blogHeader {
+    background-image: url(../assets/blog-1.jpeg);
+}
+
+.contactHeader {
+    background-image: url(../assets/contact-1.jpeg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 61vh;
+    min-width: 100%;
+}
+
+.contact {
+    margin-right: 66px;
+}
+
+.navBag {
+    position: relative;
+}
+
+.shoppingBag, .count, .countContainer, .halfScreen, .relativeParent, .ourRestaurants {
+    display: flex;
+}
+
+.shoppingBag {
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    left: -42px;
+    bottom: 4px;
+}
+
+.bag,
+.fa-search {
+    font-size: 2.3rem;
+}
+
+.checkoutLink:visited {
+    color: #2e2e2e;
+}
+
+.countContainer {
+    position: relative;
+    align-items: center;
+    height: 100%;
+    justify-content: flex-end;
+    top: 13px;
+    right: 8px
+}
+
+.count {
+    width: 28px;
+    height: 28px;
+    font-size: 1.5em;
+    border-radius: 50%;
+    background-color: #63A503;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Raleway';
+    font-weight: 900;
+    color: #f6f6f6;
+    cursor: pointer;
+}
+
+.search {
+    margin-left: 13px;
+}
+
+
+
+
+/* index.html */
+
+.afterHeader .flexContainer, .halfScreen,  .ourRestaurants, .testimonial .flexContainer, .relativeParent {
+    flex-direction: column;
+}
+
+.afterHeader .halfScreen {
+    margin: 0;
+}
+
+.afterHeader .halfScreen:last-child {
+    background: #e7e7e7;
+}
+
+.afterHeader .flexContainer .flexContainer .row {
+    flex-direction: row;
+}
+
+.halfScreen {
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0 20px 0;
+    width: 50vw;
+}
+
+.halfScreen li, .gallery li {
+    list-style: none;
+}
+
+.halfScreen li, .testimonial p {
+    flex-direction: column;
+}
+
+.halfScreen li, .halfScreen li div {
+    display: flex;
+}
+
+.halfScreen li div {
+    width: 60%;
+    justify-content: space-between;
+}
+
+.halfScreen i {
+    font-size: 2.5rem;
+    line-height: 0.2;
+}
+
+.mostPopular h2,
+.ourRestaurants h2,
+.testimonial h2 {
+    padding: 25px 0px 11px 0px;
+}
+
+.mostPopular p {
+    width: 70%;
+}
+
+.greenBackButton {
+    background: #63A503;
+    color: #f6f6f6;
+    font-family: 'Raleway';
+    margin-top: 15px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+}
+
+.greenBackButton:active {
+    box-shadow: inset 1px 1px 6px 1px #2e2e2e;
+}
+
+img.cabbage,
+img.taco {
+    width: 50.5%;
+}
+
+img.cabbage {
+    align-self: flex-end;
+}
+
+img.taco {
+    align-self: flex-start;
+}
+
+.menuCategories {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    padding: 30px;
+    margin: 0 auto 0 26px;
+        li {
+            align-items: flex-start;
+            margin-bottom: 21px;
+            padding: 21px;
+                div h3 {
+                    font-size: 1.4rem;
+                    margin-left: 14px;
+                    width: 100%;
+                }
+                p {
+                    margin-left: 45px;
+                }
+        }   
+
+        li:nth-child(5), li:last-child {
+            margin: 0 0 10.5px;
+            padding-bottom: 0;
+        }
+}
+
+//
+
+.ourRestaurants {
+    align-items: center;
+    margin-bottom: 120px;
+    padding-top: 150px;
+        .relativeParent {
+            align-items: center;
+            position: relative;
+                img:first-child {
+                    align-self: flex-end;
+                    position: absolute;
+                    left: 455px;
+                    bottom: 240px;
+                    width: 22%;
+                }
+        }
+        h2 {
+            margin-top: 20px;
+        }
+        .greenLine {
+            border: 1px solid #63A503;
+            width: 9%;
+            margin-bottom: 18px;
+        }
+        p {
+            width: 50%;
+            text-align: center;
+        }
+}
+
+// 
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+        img {
+            margin: 0;
+            max-width: 100%;
+        }
+}
+
+// 
+
+.testimonial {
+    background: hsl(71.6, 70.9%, 77.1%);
+        .flexContainer {
+            align-items: center;
+            height: 70vh;
+            justify-content: center;
+            text-align: center;
+            max-width: 50vw;
+            p {
+                position: relative;
+                text-align: left;
+            }
+            p::after, q::before, q::after {
+                color: #fff;
+                position: absolute;
+            }
+            p::after {
+                content: "< \00a0 \00a0 \00a0>";
+                font-size: 3.5rem;
+                font-weight: 700;
+                left: 23.5vw;
+                top: 104px;
+            }
+        }
+}
+
+/* blog.html */
+
+.blog {
+flex-direction: column;
+}
+
+/* contact.html */
+
+.contactPage .contactSideFlexBox {
+    display: flex;
+    justify-content: flex-end;
+    padding: 29px 28px 40px;
+    width: 133vw;
+}
+
+.contactForm, .contactSidePanel {
+    padding: 34px;
+}
+
+.contactForm {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 75%;
+
+    > .flexBox {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .contactForm h2 {
+    margin-bottom: 20px;
+    }
+
+    input, textarea {
+        background: #e7e7e7;
+        border: none;
+        font-family: "Lora";
+        margin: 8px 0;
+        padding: 15px;  
+        resize: none;;
+    }
+
+    input:first-child {
+        margin-right: 14px;
+    }
+
+    fieldset, input, textarea {
+        width: 100%;
+    }
+
+    .contactButton {
+        background: none;
+        border: none;
+        color: #63A503;
+        cursor: pointer;
+        font-family: 'Raleway';
+        margin-top:15px;
+        padding: 0;
+        text-transform: uppercase;
+    }
+}
+
+// 
+
+.contactSidePanel {
+    background: #e7e7e7;
+        h2, h3 {
+            margin: 60px 0 40px;
+        }
+        p { 
+            width: 61%;
+            margin: 20px 0 30px 0; 
+        }
+
+        p.lowMargin {
+            margin: 10px 0 10px 0; 
+        }
+
+        p.lowMargin:nth-child(4) span {
+            font-family: "Raleway";
+            font-weight: bold; 
+        }
+        p.lowMargin:nth-child(4) ~ p {
+            color: #999999; 
+        }
+        
+        p.lowMargin:nth-child(5) {
+            font-style: italic;
+        }
+
+        p:last-child  {
+            margin: 20px 0 50px; 
+        }
+}
+
+/* Footer */
+
+.columnContainer {
+    justify-content: space-evenly;
+        .footerColumn {
+            color: #999999;
+            margin: 139px 0;
+            width: calc(100% / 6);
+                p { 
+                    font-size: 1rem;
+                    line-height: 2.1;
+                }
+                .deliciousColumn p,
+                .deliciousColumn p:nth-child(3) {
+                    margin-bottom: 25px;
+                }
+                .deliciousColumn p:first-child {
+                    margin-bottom: 0;
+                }
+                .recentPosts p {
+                    line-height: 3.5;
+                }
+
+                .newsletterForm {
+                    height: 50%;
+                        .emailLabel { 
+                            font-size: 1rem;
+                            line-height: 2.1;
+                        }
+                        .flexContainer {
+                            margin-top: 24px;
+                                .email {
+                                    background-color: #5b5b5b;
+                                    border: none;
+                                    border-radius: 0;
+                                    color: #999999;
+                                    padding: 6px;
+                                    width: 100%;
+                                }
+
+                                .email:focus {
+                                    padding: 4px;
+                                }
+
+                                .greenBackButton {
+                                    border: none;
+                                    margin:0;
+                                    height: 100%;
+                                    padding-right: 33px;
+                                    font-size: 2rem;
+                                }  
+                        }
+                }
+        }
+}
+
+.copyright {
+    background: #222;
+    color: #999999;
+    font-family: 'Raleway';
+    padding: 20px;
+    width: 100%;
+        p {
+            margin-left: 11vw;
+        }
+
+        span {
+            color: #63A503;
+            text-transform: uppercase;
+            }
+}
