@@ -1,6 +1,11 @@
 // CLASSES
 
+// Focus on button styled anchor tags
 
+.greenBackButton:focus, a.pinkFocus:focus, .contactButton:focus {
+    outline: 2px solid #d10b5f;
+}                               
+                              
 /* Header */
 
 header .flexContainer {
@@ -555,7 +560,7 @@ img.taco {
                                     height: 100%;
                                     margin:0;
                                     padding-right: 33px;
-                                }  
+                                }
                         }
                 }
             }

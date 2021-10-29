@@ -74,10 +74,18 @@ nav ul {
         }
 }
 
+a {
+    padding: 5px;
+}
+
 input:focus,
-select:focus,
+a:focus,
 textarea:focus {
-    outline: 1px solid #63A503;
+    outline: 2px solid #63A503;
+}
+
+button:focus {
+    outline: 2px solid #d10b5f;
 }
 
 input[type="checkbox"] {
