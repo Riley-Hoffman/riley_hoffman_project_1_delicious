@@ -16,23 +16,27 @@
 </head>
 
 <body>
+
+    <!-- Header -->
+    
     <header class="contactHeader">
         <div class="flexContainer">
             <h1>Delicious</h1>
             <nav class="headerNav">
-                <label for="hamburger"><i class="fa fa-bars"></i></label>
+                <label for="hamburger" aria-label="Navigation Button"><i class="fa fa-bars"></i></label>
                 <input class="menuToggle" type="checkbox" id="hamburger" name="hamburger">
-                <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#recipes">Recipes</a></li>
-                    <li><a href="#nutrition">Nutrition</a></li>
-                    <li><a href="./blog.html">Blog</a></li>
-                    <li><a href="#shop">Shop</a></li>
-                    <li class="contact"><a href="./contact.html">Contact</a></li>
-                    <li class="navBag">
-                        <div class="shoppingBag">
-                            <div class="bag"><a class="checkoutLink" href=""><i class="fas fa-shopping-bag"></i></a>
+                <ul class="navList">
+                    <li class="navItem"><a href="./index.html">Home</a></li>
+                    <li class="navItem"><a href="#about">About</a></li>
+                    <li class="navItem"><a href="#recipes">Recipes</a></li>
+                    <li class="navItem"><a href="#nutrition">Nutrition</a></li>
+                    <li class="navItem"><a href="./blog.html">Blog</a></li>
+                    <li class="navItem"><a href="#shop">Shop</a></li>
+                    <li class="contact navItem"><a href="./contact.html">Contact</a></li>
+                    <li class="navBag target">
+                        <div class="shoppingBag target">
+                            <div class="bag"><a class="checkoutLink" href="" aria-label="Checkout. 2 items in shopping bag. "><i
+                                        class="fas fa-shopping-bag"></i></a>
                             </div>
                             <div class="countContainer">
                                 <div class="count">2</div>
@@ -40,7 +44,7 @@
                         </div>
                     </li>
                     <li class="search">
-                        <div><i class="fas fa-search"></i></div>
+                        <div><a href="#" aria-label="search"><i class="fas fa-search"></i></a></div>
                     </li>
                 </ul>
             </nav>
@@ -60,10 +64,14 @@
                                 <h2>Drop Us A Line</h2>
                             </legend>
                             <div class="flexBox">
-                                <input type="text" placeholder="Your Name">
-                                <input type="text" placeholder="Your Email">
+                                <label for="name" class="sr-only">Enter your name.</label>
+                                <input type="text" id="name" name="name" placeholder="Your Name">
+                                <label for="email" class="sr-only">Enter your email address.</label>
+                                <input type="text" id="email" name="email" placeholder="Your Email">
                             </div>
-                            <input type="text" placeholder="Subject">
+                            <label for="subject" class="sr-only">Enter the subject of your email.</label>
+                            <input type="text" id="subject" name="subject" placeholder="Subject">
+                            <label for="emailBox" class="sr-only">Enter your message.</label>
                             <textarea name="emailBox" id="emailBox" cols="30" rows="10" placeholder="Message"></textarea>
                         </fieldset>
                         <button class="contactButton" type="submit">Send Message ➞</button>
@@ -81,8 +89,8 @@
                     <h3>Contact Info</h3>
                     <p class="lowMargin">A delicious restaurant</p>
                     <p class="lowMargin">Toronto, Ontario</p>
-                    <p><a href="mailto:yum@food.com">yum@food.com</a></p>
-                    <p><a href="tel:12345678910" aria-label="1 2 3. 4 5 6. 7 8 9 0.">+1 234 567 8910</a></p>
+                    <p><a href="mailto:yum@food.com" aria-label="email">yum@food.com</a></p>
+                    <p><a href="tel:12345678910" aria-label="Phone Number: 1 2 3. 4 5 6. 7 8 9 0.">+1 234 567 8910</a></p>
                 </div>
             </div>
         </section>
@@ -104,8 +112,8 @@
                 <address>
                     <p>A delicious restaurant</p>
                     <p>Toronto, Ontario</p>
-                    <p><a href="mailto:yum@food.com">yum@food.com</a></p>
-                    <p><a href="tel:1234567890" aria-label="1 2 3. 4 5 6. 7 8 9 0.">+123 456 7890</a></p>
+                    <p><a href="mailto:yum@food.com" aria-label="email">yum@food.com</a></p>
+                    <p><a href="tel:1234567890" aria-label="Phone Number: 1 2 3. 4 5 6. 7 8 9 0.">+123 456 7890</a></p>
                 </address>
             </div>
             <div class="footerColumn recentPosts">
@@ -116,18 +124,20 @@
                 <address>
                     <p>A delicious restaurant</p>
                     <p>Toronto, Ontario</p>
-                    <p><a href="mailto:yum@food.com">yum@food.com</a> <a href="tel:1234567890"
-                            aria-label="1 2 3. 4 5 6. 7 8 9 0.">+123
+                    <p><a href="mailto:yum@food.com" aria-label="email">yum@food.com</a> <a href="tel:1234567890"
+                            aria-label="Phone Number: 1 2 3. 4 5 6. 7 8 9 0.">+123
                             456 7890</a></p>
                 </address>
             </div>
             <div class="footerColumn subscribeNow">
                 <h4>Subscribe Now</h4>
-                <form action="submit" class="newsletterForm">
-                    <label class="emailLabel" for="email">Get all of our newest recipes immediately in your inbox!</label>
+                <form action="_blank" class="newsletterForm">
+                    <label class="emailLabel" for="email">Get all of our newest recipes immediately in your
+                        inbox!</label>
                     <div class="flexContainer">
-                        <input class="email" type="email" id="email" placeholder="Enter your email"><button class="greenBackButton"
-                            type="submit">➞</button>
+                        <label for="email" class="sr-only">Enter your email address.</label>
+                        <input class="email" type="email" id="email" placeholder="Enter your email"><button
+                            class="greenBackButton" type="submit">➞</button>
                     </div>
                 </form>
             </div>

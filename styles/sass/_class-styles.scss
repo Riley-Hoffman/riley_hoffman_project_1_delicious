@@ -120,7 +120,6 @@ div.flexContainer.row {
 
 .halfScreen li div {
     justify-content: space-between;
-    width: 60%;
 }
 
 .halfScreen i {
@@ -295,6 +294,13 @@ img.taco {
             display: flex;
             justify-content: space-evenly;
             width: 25%;
+        }
+        .share li {
+            color: #999999;
+                i {
+                    color: #999999;
+                    font-size: 2rem;
+                }
         }
         .bioContainer {
             align-items: center;
