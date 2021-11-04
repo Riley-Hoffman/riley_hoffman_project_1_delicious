@@ -303,6 +303,49 @@
                 }
             })
         }
+
+        function startEventListener2() {
+                // Listen for clicks on document
+                document.addEventListener('click', function searchCloseListener(e2) {
+                    // Variable to hold click target
+                    const target2 = e2.target;
+
+                    // Variable to hold search input
+                    const searchInput = document.getElementById('search')
+                    // Variable To Hold Search Input Label
+                    const searchLabel = document.getElementById('searchLabel')
+                    // Variable containing the form element
+                    const searchForm = document.getElementById('searchForm');
+
+                    // If click target is not form element
+                    if (target2 != searchIcon && target2 != searchInput) {
+
+                        // CSS Changes to ascend search input
+                        glassContainer.style.padding = "0"
+                        glassContainer.style.transform = "none"
+                        glassContainer.style.display = "block"
+
+
+
+                        // Variable To Hold Search Input Label
+                        const searchLabel = document.getElementById('searchLabel')
+                        // Variable containing the form element
+                        const searchForm = document.getElementById('searchForm');
+
+                        // Remove added/changed elements
+                        searchInput.remove()
+                        searchLabel.remove()
+                        searchForm.remove()
+                        glassContainer.innerHTML = `${searchContainerHTML}`
+
+                        // Remove first Event Listener
+                        this.removeEventListener("click", e2, searchCloseListener)
+
+                        // Run the initial event listener again
+                        listenerReset()
+                    }
+                })
+            }
     
 
 </script>
