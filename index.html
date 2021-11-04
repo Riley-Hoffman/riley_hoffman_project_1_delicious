@@ -273,6 +273,36 @@
     
     // Variable To Hold Full Form HTML
     const formHTML = '<form id="searchForm" action="_blank" aria-hidden="false"><label class="sr-only searchInputLabel" for="search" id="searchLabel">Enter search text</label><input type="search" id="search" name="search" placeholder="Search"><button id="magGlass" class="magGlass" aria-label="search button"><i class="fas fa-search"></i></button></form>'   
+
+    function startEventListener() {
+            // Listen for click event on document
+            document.addEventListener('click', function eventListener(e) {
+                // variable to hold click target
+                const target = e.target;
+                // if search icon is clicked
+                if (target === searchContainer || target === glassContainer || target === searchButton) {
+
+                    /* Magnifying Glass Clicked */
+
+                    // CSS Changes to descend search input
+                    glassContainer.style.padding = "10px"
+                    glassContainer.style.transition = "transform, 1.1s"
+                    glassContainer.style.transform = "translate(-150px, 60px)"
+                    glassContainer.style.display = "flex"
+                    glassContainer.style.flexDirection = "row"
+
+                    // Add search input to .glassContainer next to magnifying glass
+                    glassContainer.innerHTML = `${formHTML}`
+                    // Remove first Event Listener
+                    this.removeEventListener("click", e, eventListener)
+
+                }
+                // if search container is not present start second event listener
+                if (searchContainer.length === 0) {
+                    listener2()
+                }
+            })
+        }
     
 
 </script>
