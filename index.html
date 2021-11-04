@@ -274,6 +274,19 @@
     // Variable To Hold Full Form HTML
     const formHTML = '<form id="searchForm" action="_blank" aria-hidden="false"><label class="sr-only searchInputLabel" for="search" id="searchLabel">Enter search text</label><input type="search" id="search" name="search" placeholder="Search"><button id="magGlass" class="magGlass" aria-label="search button"><i class="fas fa-search"></i></button></form>'   
 
+     // Variable To Start Restart The Event Listener
+        const listenerReset = function resetEventListener() {
+            startEventListener()
+        }
+
+        // Variable To Start Restart 2nd Event Listener
+        const listener2 = function setEventListener2() {
+            startEventListener2()
+        }
+
+        // Start Initial Listener 
+        startEventListener()
+
     function startEventListener() {
             // Listen for click event on document
             document.addEventListener('click', function eventListener(e) {
