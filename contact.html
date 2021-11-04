@@ -20,11 +20,11 @@
     <!-- Header -->
     
     <header class="contactHeader">
-        <a href="#afterHeader" class="skip-link greenBackButton">Skip To Content</a>
+        <a href="#contactPage" class="skip-link greenBackButton">Skip To Content</a>
         <div class="flexContainer">
             <h1>Delicious</h1>
             <nav class="headerNav">
-                <label for="hamburger" aria-label="Navigation Button"><i class="fa fa-bars"></i></label>
+                <label class="hamburger" for="hamburger" aria-label="Navigation Button"><i class="fa fa-bars"></i></label>
                 <input class="menuToggle" type="checkbox" id="hamburger" name="hamburger">
                 <ul class="navList">
                     <li class="navItem"><a href="./index.html">Home</a></li>
@@ -45,7 +45,15 @@
                         </div>
                     </li>
                     <li class="search">
-                        <div><a href="#" aria-label="search"><i class="fas fa-search"></i></a></div>
+                        <!-- added form element to contain button -->
+                        <div id="glassContainer">
+                            <div class="searchContainer">
+                                <button id="magGlass" class="magGlass" aria-label="search button">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                        </div>
                     </li>
                 </ul>
             </nav>
@@ -56,7 +64,7 @@
  
         <!-- Main Open -->
 
-        <section class="contactPage">
+        <section id="contactPage" class="contactPage">
             <div class="flexContainer">
                 <div class="contactSideFlexBox">
                     <form action="_blank" class="contactForm flexBox">
@@ -149,10 +157,7 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        
-    </script>
+    <script src="./search.js"></script>
 </body>
 
 </html>

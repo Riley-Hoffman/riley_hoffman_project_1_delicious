@@ -20,10 +20,10 @@
     <!-- Header -->
     
     <header class="blogHeader">
-        <a href="#afterHeader" class="skip-link greenBackButton">Skip To Content</a>
+        <a href="#blog" class="skip-link greenBackButton">Skip To Content</a>
         <h1>Delicious</h1>
         <nav class="headerNav">
-            <label for="hamburger" aria-label="Navigation Button"><i class="fa fa-bars"></i></label>
+            <label class="hamburger" for="hamburger" aria-label="Navigation Button"><i class="fa fa-bars"></i></label>
             <input class="menuToggle" type="checkbox" id="hamburger" name="hamburger">
             <ul class="navList">
                 <li class="navItem"><a href="./index.html">Home</a></li>
@@ -44,7 +44,15 @@
                     </div>
                 </li>
                 <li class="search">
-                    <div><a href="#" aria-label="search"><i class="fas fa-search"></i></a></div>
+                    <!-- added form element to contain button -->
+                    <div id="glassContainer">
+                        <div class="searchContainer">
+                            <button id="magGlass" class="magGlass" aria-label="search button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                    </div>
                 </li>
             </ul>
         </nav>
@@ -54,7 +62,7 @@
 
         <!-- Main Open -->
 
-        <section class="flexContainer blog">
+        <section id="blog" class="flexContainer blog">
             <div class="wrapper">
                 <article>
                     <h2>Pineapple Chicken</h2>
@@ -210,6 +218,7 @@
             </div>
         </div>
     </footer>
+    <script src="./search.js"></script>
 </body>
 
 </html>
