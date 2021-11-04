@@ -17,6 +17,16 @@ header .flexContainer {
     justify-content: space-between;
 }
 
+.hamburger {
+            font-size: 2rem;
+            position: absolute;
+            visibility: hidden;
+        }
+        
+.searchInputLabel {
+    text-transform: capitalize;
+}
+
 .blogHeader, .contactHeader {
     background-repeat: no-repeat;
     background-size: contain;
@@ -82,8 +92,15 @@ header .flexContainer {
 
 .search {
     margin-left: 13px;
-        div .fa-search {
-            font-size: 2.3rem;
+            .magGlass:focus {
+                outline-color: #63A503;
+            }
+            .magGlass {
+                border: none;
+                background: none;
+                .fa-search {
+                    font-size: 2.3rem;
+                }
         }
 }
 

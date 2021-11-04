@@ -15,7 +15,7 @@ article, aside, footer, header, nav, section {
 
 h1 {
   font-size: 2em;
-  margin: .67em 0;
+  margin: 0.67em 0;
 }
 
 figcaption, figure, main {
@@ -34,7 +34,7 @@ hr {
 }
 
 pre {
-  font-family: monospace,monospace;
+  font-family: monospace, monospace;
   font-size: 1em;
 }
 
@@ -59,7 +59,7 @@ b, strong {
 }
 
 code, kbd, samp {
-  font-family: monospace,monospace;
+  font-family: monospace, monospace;
   font-size: 1em;
 }
 
@@ -84,11 +84,11 @@ sub, sup {
 }
 
 sub {
-  bottom: -.25em;
+  bottom: -0.25em;
 }
 
 sup {
-  top: -.5em;
+  top: -0.5em;
 }
 
 audio, video {
@@ -137,7 +137,7 @@ button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring
 }
 
 fieldset {
-  padding: .35em .75em .625em;
+  padding: 0.35em 0.75em 0.625em;
 }
 
 legend {
@@ -288,7 +288,7 @@ html {
 
 body {
   color: #2e2e2e;
-  font-family: 'Lora';
+  font-family: "Lora";
   font-size: 1.3rem;
   line-height: 21px;
   letter-spacing: 0.3px;
@@ -313,18 +313,12 @@ header {
   padding: 10px;
 }
 
-header label {
-  font-size: 2rem;
-  position: absolute;
-  visibility: hidden;
-}
-
 h1,
 h2,
 h3,
 h4,
 nav {
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -358,10 +352,11 @@ h4 {
 nav ul {
   margin-left: 27px;
 }
-
 nav ul li {
   list-style: none;
   margin: 0px 21px;
+  position: relative;
+  z-index: 10;
 }
 
 a {
@@ -378,11 +373,11 @@ button:focus {
   outline: 2px solid #d10b5f;
 }
 
-input[type="checkbox"] {
+input[type=checkbox] {
   visibility: hidden;
 }
 
-input[type="checkbox"]:checked + ul {
+input[type=checkbox]:checked + ul {
   right: 0;
 }
 
@@ -392,7 +387,7 @@ i {
 }
 
 q {
-  font-family: 'Lora';
+  font-family: "Lora";
   font-style: italic;
   line-height: 20px;
   letter-spacing: 0.6px;
@@ -423,11 +418,9 @@ fieldset {
 footer {
   background: #2e2e2e;
 }
-
 footer h3 {
   color: #63A503;
 }
-
 footer button {
   background: #63A503;
   border: none;
@@ -463,6 +456,16 @@ header .flexContainer {
           justify-content: space-between;
 }
 
+.hamburger {
+  font-size: 2rem;
+  position: absolute;
+  visibility: hidden;
+}
+
+.searchInputLabel {
+  text-transform: capitalize;
+}
+
 .blogHeader, .contactHeader {
   background-repeat: no-repeat;
   background-size: contain;
@@ -486,7 +489,6 @@ header .flexContainer {
 .navBag {
   position: relative;
 }
-
 .navBag .shoppingBag {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -499,15 +501,12 @@ header .flexContainer {
   left: -42px;
   bottom: 4px;
 }
-
 .navBag .shoppingBag .bag {
   font-size: 2.3rem;
 }
-
 .navBag .shoppingBag .bag .checkoutLink:visited {
   color: #2e2e2e;
 }
-
 .navBag .shoppingBag .countContainer {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -520,7 +519,6 @@ header .flexContainer {
   top: 13px;
   right: 8px;
 }
-
 .navBag .shoppingBag .countContainer .count {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -529,7 +527,7 @@ header .flexContainer {
   border-radius: 50%;
   color: #f6f6f6;
   cursor: pointer;
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-size: 2rem;
   font-weight: 900;
   height: 28px;
@@ -548,8 +546,14 @@ header .flexContainer {
 .search {
   margin-left: 13px;
 }
-
-.search div .fa-search {
+.search .magGlass:focus {
+  outline-color: #63A503;
+}
+.search .magGlass {
+  border: none;
+  background: none;
+}
+.search .magGlass .fa-search {
   font-size: 2.3rem;
 }
 
@@ -628,7 +632,7 @@ div.flexContainer.row {
 .greenBackButton {
   background: #63A503;
   color: #f6f6f6;
-  font-family: 'Raleway';
+  font-family: "Raleway";
   margin-top: 15px;
   padding: 13px 35px;
   text-transform: uppercase;
@@ -655,16 +659,12 @@ img.taco {
 }
 
 .menuCategories {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
   margin: 0 auto 0 26px;
   padding: 30px;
 }
-
 .menuCategories li {
   -webkit-box-align: start;
       -ms-flex-align: start;
@@ -672,17 +672,14 @@ img.taco {
   margin-bottom: 21px;
   padding: 21px;
 }
-
 .menuCategories li div h3 {
   font-size: 1.4rem;
   margin-left: 14px;
   width: 100%;
 }
-
 .menuCategories li p {
   margin-left: 45px;
 }
-
 .menuCategories li:nth-child(5), .menuCategories li:last-child {
   margin: 0 0 10.5px;
   padding-bottom: 0;
@@ -695,14 +692,12 @@ img.taco {
   margin-bottom: 120px;
   padding-top: 150px;
 }
-
 .ourRestaurants .relativeParent {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   position: relative;
 }
-
 .ourRestaurants .relativeParent img:first-child {
   -ms-flex-item-align: end;
       align-self: flex-end;
@@ -711,29 +706,23 @@ img.taco {
   bottom: 240px;
   width: 22%;
 }
-
 .ourRestaurants h2 {
   margin-top: 20px;
 }
-
 .ourRestaurants .greenLine {
   border: 1px solid #63A503;
   margin-bottom: 18px;
   width: 9%;
 }
-
 .ourRestaurants p {
   text-align: center;
   width: 50%;
 }
 
 .gallery {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
-
 .gallery img {
   margin: 0;
   max-width: 100%;
@@ -742,7 +731,6 @@ img.taco {
 .testimonial {
   background: #deee9b;
 }
-
 .testimonial .flexContainer {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -754,19 +742,16 @@ img.taco {
   max-width: 50vw;
   text-align: center;
 }
-
 .testimonial .flexContainer p {
   position: relative;
   text-align: left;
 }
-
 .testimonial .flexContainer p::after, .testimonial .flexContainer q::before, .testimonial .flexContainer q::after {
   color: #fff;
   position: absolute;
 }
-
 .testimonial .flexContainer p::after {
-  content: "< \00a0 \00a0 \00a0>";
+  content: "<    >";
   font-size: 3.5rem;
   font-weight: 700;
   left: 23.5vw;
@@ -780,11 +765,9 @@ img.taco {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-
 .blog article, .blog .share, .blog .bioContainer {
   border-bottom: 1px solid #e7e7e7;
 }
-
 .blog article {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -794,32 +777,25 @@ img.taco {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-
 .blog article .byLine {
   margin: 5px 0 30px;
 }
-
 .blog article p {
   margin: 0 0 30px;
 }
-
 .blog article p:last-child {
   margin: 0;
 }
-
 .blog .tags {
   padding: 30px 0 15px;
 }
-
 .blog .share {
   padding: 15px 0 30px;
 }
-
 .blog .tags span, .blog .share span {
-  font-family: 'Raleway';
+  font-family: "Raleway";
   text-transform: uppercase;
 }
-
 .blog .tags ul, .blog .share ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -829,16 +805,13 @@ img.taco {
           justify-content: space-evenly;
   width: 25%;
 }
-
 .blog .share li {
   color: #999999;
 }
-
 .blog .share li i {
   color: #999999;
   font-size: 2rem;
 }
-
 .blog .bioContainer {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -847,19 +820,16 @@ img.taco {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-
 .blog .bioContainer .bio {
   background: #e7e7e7;
   padding: 42px;
   width: 81%;
 }
-
 .blog .bioContainer .bio h3 {
   font-size: 1.6rem;
   margin-bottom: 15px;
   line-height: initial;
 }
-
 .blog .bioContainer .bio p {
   line-height: 2.1;
 }
@@ -877,7 +847,6 @@ img.taco {
       -ms-flex-align: end;
           align-items: flex-end;
 }
-
 .posts li:nth-of-type(2) {
   margin: 0 25px;
 }
@@ -896,7 +865,6 @@ img.taco {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-
 .commentsSection .comment1, .commentsSection .comment2, .comments .comment1, .comments .comment2 {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -904,13 +872,11 @@ img.taco {
           flex-direction: row;
   margin: 25px 0;
 }
-
 .commentsSection .comment1 img, .commentsSection .comment2 img, .comments .comment1 img, .comments .comment2 img {
   height: 100%;
   margin-right: 30px;
   max-width: 5vw;
 }
-
 .commentsSection .comment1 .flexBox, .commentsSection .comment2 .flexBox, .comments .comment1 .flexBox, .comments .comment2 .flexBox {
   background: #e7e7e7;
   -webkit-box-orient: vertical;
@@ -919,19 +885,15 @@ img.taco {
           flex-direction: column;
   position: relative;
 }
-
 .commentsSection .comment1 .flexBox p, .commentsSection .comment2 .flexBox p, .comments .comment1 .flexBox p, .comments .comment2 .flexBox p {
   margin: 7px;
 }
-
 .commentsSection .comment1 .flexBox p span, .commentsSection .comment2 .flexBox p span, .comments .comment1 .flexBox p span, .comments .comment2 .flexBox p span {
-  font-family: 'Raleway';
+  font-family: "Raleway";
 }
-
 .commentsSection .comment1 .flexBox .date, .commentsSection .comment2 .flexBox .date, .comments .comment1 .flexBox .date, .comments .comment2 .flexBox .date {
-  font-family: 'Raleway';
+  font-family: "Raleway";
 }
-
 .commentsSection .comment1 .flexBox::before, .commentsSection .comment2 .flexBox::before, .comments .comment1 .flexBox::before, .comments .comment2 .flexBox::before {
   color: #e7e7e7;
   content: "◀";
@@ -952,7 +914,6 @@ img.taco {
       -ms-flex-pack: center;
           justify-content: center;
 }
-
 .commentForm fieldset {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -963,26 +924,21 @@ img.taco {
           flex-direction: column;
   width: 100%;
 }
-
 .commentForm fieldset p {
   color: #999999;
   margin: 10px 0 20px;
 }
-
 .commentForm fieldset .flexBox {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-
 .commentForm fieldset .flexBox input {
   width: calc(100% / 3 - 20px);
 }
-
 .commentForm fieldset .commentForm h2 {
   margin-bottom: 20px;
 }
-
 .commentForm fieldset input, .commentForm fieldset textarea {
   background: #f6f6f6;
   border: 2px solid #e7e7e7;
@@ -991,7 +947,6 @@ img.taco {
   padding: 15px;
   resize: none;
 }
-
 .commentForm .greenBackButton {
   padding: 20px 30px;
 }
@@ -1025,22 +980,18 @@ img.taco {
           justify-content: center;
   width: 75%;
 }
-
 .contactForm .contactFormFirstRow {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
 }
-
 .contactForm .contactFormFirstRow input {
   width: 47%;
 }
-
 .contactForm .contactForm h2 {
   margin-bottom: 20px;
 }
-
 .contactForm input, .contactForm textarea {
   background: #e7e7e7;
   border: none;
@@ -1049,17 +1000,15 @@ img.taco {
   padding: 15px;
   resize: none;
 }
-
 .contactForm fieldset, .contactForm input, .contactForm textarea {
   width: 100%;
 }
-
 .contactForm .contactButton {
   background: none;
   border: none;
   color: #63A503;
   cursor: pointer;
-  font-family: 'Raleway';
+  font-family: "Raleway";
   margin-top: 15px;
   padding: 0;
   text-transform: uppercase;
@@ -1068,33 +1017,26 @@ img.taco {
 .contactSidePanel {
   background: #e7e7e7;
 }
-
 .contactSidePanel h2, .contactSidePanel h3 {
   margin: 60px 0 40px;
 }
-
 .contactSidePanel p {
   margin: 20px 0 30px 0;
   width: 61%;
 }
-
 .contactSidePanel p.lowMargin {
   margin: 10px 0 10px 0;
 }
-
 .contactSidePanel p.lowMargin:nth-child(4) span {
   font-family: "Raleway";
   font-weight: bold;
 }
-
 .contactSidePanel p.lowMargin:nth-child(4) ~ p {
   color: #999999;
 }
-
 .contactSidePanel p.lowMargin:nth-child(5) {
   font-style: italic;
 }
-
 .contactSidePanel p:last-child {
   margin: 20px 0 50px;
 }
@@ -1105,44 +1047,35 @@ img.taco {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
-
 .columnContainer .footerColumn {
   color: #999999;
   margin: 139px 0;
   width: calc(100% / 6);
 }
-
 .columnContainer .footerColumn p {
   font-size: 1rem;
   line-height: 2.1;
 }
-
 .columnContainer .footerColumn .deliciousColumn p,
 .columnContainer .footerColumn .deliciousColumn p:nth-child(3) {
   margin-bottom: 25px;
 }
-
 .columnContainer .footerColumn .deliciousColumn p:first-child {
   margin-bottom: 0;
 }
-
 .columnContainer .footerColumn .recentPosts p {
   line-height: 3.5;
 }
-
 .columnContainer .footerColumn .newsletterForm {
   height: 50%;
 }
-
 .columnContainer .footerColumn .newsletterForm .emailLabel {
   font-size: 1rem;
   line-height: 2.1;
 }
-
 .columnContainer .footerColumn .newsletterForm .flexContainer {
   margin-top: 24px;
 }
-
 .columnContainer .footerColumn .newsletterForm .flexContainer .email {
   background-color: #5b5b5b;
   border: none;
@@ -1151,11 +1084,9 @@ img.taco {
   padding: 6px;
   width: 100%;
 }
-
 .columnContainer .footerColumn .newsletterForm .flexContainer .email:focus {
   padding: 4px;
 }
-
 .columnContainer .footerColumn .newsletterForm .flexContainer .greenBackButton {
   border: none;
   font-size: 2rem;
@@ -1167,15 +1098,13 @@ img.taco {
 .copyright {
   background: #222;
   color: #999999;
-  font-family: 'Raleway';
+  font-family: "Raleway";
   padding: 20px;
   width: 100%;
 }
-
 .copyright p {
   margin-left: 11vw;
 }
-
 .copyright span {
   color: #63A503;
   text-transform: uppercase;
@@ -1186,11 +1115,13 @@ img.taco {
   .navItem {
     margin: 0px 9px;
   }
+
   .target .shoppingBag {
     right: 14px;
     left: initial;
     width: 50%;
   }
+
   .tacoRow div.flexContainer.row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1200,20 +1131,21 @@ img.taco {
         -ms-flex-align: start;
             align-items: flex-start;
   }
+
   .halfScreen:nth-child(2) {
     width: 75%;
   }
+
   img.taco {
     -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
         align-self: center;
     margin: 40px 0 35px;
   }
+
   .blog .tags ul {
     width: 56%;
   }
 }
-
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
   header {
@@ -1275,18 +1207,22 @@ img.taco {
   header .headerNav ul .search div .fa-search {
     font-size: 3.3rem;
   }
+
   .halfScreen:nth-child(2) {
     width: 100%;
   }
+
   .blogHeader, .contactHeader {
     background-size: cover;
     min-height: 51vh;
   }
+
   .contactHeader .flexContainer {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
   }
+
   .cabbageRow div.flexContainer.row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1307,12 +1243,14 @@ img.taco {
   .cabbageRow div.flexContainer.row .halfScreen .menuCategories {
     margin: 0;
   }
+
   .cabbageRow div.flexContainer.row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
+
   .gallery {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1327,24 +1265,30 @@ img.taco {
     margin: 0 auto;
     max-width: 70%;
   }
+
   .ourRestaurants .relativeParent img:first-child {
     left: 287px;
     bottom: 156px;
   }
+
   q::after {
     left: 51vw;
     top: 212px;
   }
+
   .testimonial .flexContainer p::after {
     left: 13vw;
     top: 228px;
   }
+
   h4 {
     margin-bottom: 25px;
   }
+
   .blog .tags ul, .blog .share ul {
     width: 100%;
   }
+
   .blog .bioContainer {
     position: relative;
   }
@@ -1354,6 +1298,7 @@ img.taco {
     top: 10px;
     left: 74%;
   }
+
   .posts {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1363,27 +1308,33 @@ img.taco {
   .posts li, .posts li:nth-of-type(2) {
     margin: 20px 0;
   }
+
   .commentForm fieldset .flexBox {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
+
   .commentForm fieldset .flexBox input, .commentForm textarea {
     width: 100%;
   }
+
   .contactPage > .flexContainer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
+
   .contactPage .contactSideFlexBox, .contactForm {
     width: 100%;
   }
+
   .contactSidePanel p {
     width: 100%;
   }
+
   .columnContainer {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
