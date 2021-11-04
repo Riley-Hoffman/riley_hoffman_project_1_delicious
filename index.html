@@ -248,24 +248,32 @@
 </body>
 <script>
     // Variable To Hold Magnifying Glass Container
-        const glassContainer = document.getElementById('glassContainer')
+    const glassContainer = document.getElementById('glassContainer')
+    
+    // Variable To Hold a tag 
+    const searchButton = document.getElementById('magGlass')
+    
+    // Variable To Hold Search Icon (i tag)
+    const searchIcon = document.getElementsByClassName('fa-search')
+    
+    // Variable To Hold list item
+    const searchListItem = document.getElementsByClassName('search')
+    
+    // Variable To Hold header
+    const header = document.getElementById('header')
+    
+    // Variable To Hold searchContainer 
+    const searchContainer = document.getElementsByClassName('searchContainer')
+    
+    // Variable to hold search input
+    const searchInput = document.getElementById('search')
+    
+    // HTML for original search container
+    const searchContainerHTML = '<div class="searchContainer"><button id="magGlass" class="magGlass" aria-label="search button"><i class="fas fa-search"></i></button></>'
+    
+    // Variable To Hold Full Form HTML
+    const formHTML = '<form id="searchForm" action="_blank" aria-hidden="false"><label class="sr-only searchInputLabel" for="search" id="searchLabel">Enter search text</label><input type="search" id="search" name="search" placeholder="Search"><button id="magGlass" class="magGlass" aria-label="search button"><i class="fas fa-search"></i></button></form>'   
+    
 
-        // Variable To Hold a tag 
-        const searchButton = document.getElementById('magGlass')
-
-        // Variable To Hold Search Icon (i tag)
-        const searchIcon = document.getElementsByClassName('fa-search')
-
-        // Variable To Hold list item
-        const searchListItem = document.getElementsByClassName('search')
-
-        // Variable To Hold header
-        const header = document.getElementById('header')
-
-        // Variable To Hold searchContainer 
-        const searchContainer = document.getElementsByClassName('searchContainer')
-
-        // Variable to hold search input
-        const searchInput = document.getElementById('search')
 </script>
 </html>
